@@ -1,4 +1,5 @@
 <?php
+// Этот файл нужен для загрузки изображений на сайт из admin.php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -60,7 +61,7 @@ if ($uploadOk == 0) {
 } else {
   $dbh = new PDO('mysql:host=localhost;dbname=mandragora', 'dev', 'DarkhanBestProgrammerSuckHisDIck!!_27');
 
-  $stmt = $dbh->prepare("INSERT INTO plants (user_id, title, description, filename)
+  $stmt = $dbh->prepare("INSERT INTO plants (user_id, title, description, image_url)
                        VALUES (:user_id, :title, :description, :filename)");
 
   $stmt->bindParam(':user_id', $author);
