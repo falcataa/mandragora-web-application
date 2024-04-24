@@ -54,11 +54,12 @@ if ($uploadOk == 0) {
   echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
-  $dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
+  $dbh = new PDO('mysql:host=localhost;dbname=mandragora', 'dev', 'DarkhanBestProgrammerSuckHisDIck!!_27');
 
   $stmt = $dbh->prepare("INSERT INTO plants (user_id, title, description, filename)
-                       VALUES (:user_id, :title, :description, :filename");
-  $stmt->bindParam(':user_id', $fileName);
+                       VALUES (:user_id, :title, :description, :filename)");
+
+  $stmt->bindParam(':user_id', $author);
   $stmt->bindParam(':title', $description);
   $stmt->bindParam(':description', $description);
   $stmt->bindParam(':filename', $hashedFileName);
