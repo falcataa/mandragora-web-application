@@ -40,9 +40,10 @@
         unset($_SESSION['success']);
       }
       ?>
-      <form action="includes/register_script.php" method="POST" class="section-login__form">
+      <form action="includes/register_script.php" method="POST" class="section-login__form" id="register-form">
         <div class="login-input__wrapper">
-          <input type="text" class="login-input" placeholder="Логин" name="username" />
+          <input type="text" class="login-input" placeholder="Логин" name="username" pattern="[A-Za-z0-9]{5,20}"
+            title="Длина имени пользователя должна составлять от 5 до 20 буквенно-цифровых символов" />
           <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M2.89748 1.17969C2.36627 1.17969 1.93602 1.62478 1.93602 2.17431C1.93602 2.72383 2.36627 3.16892 2.89748 3.16892C3.42869 3.16892 3.85894 2.72383 3.85894 2.17431C3.85894 1.62478 3.42869 1.17969 2.89748 1.17969ZM3.37829 2.17431C3.37829 1.90079 3.16196 1.677 2.89756 1.677C2.63316 1.677 2.41683 1.90079 2.41683 2.17431C2.41683 2.44783 2.63316 2.67162 2.89756 2.67162C3.16196 2.67162 3.37829 2.44783 3.37829 2.17431ZM4.33971 4.66085C4.29163 4.48431 3.5465 4.16355 2.89751 4.16355C2.25092 4.16355 1.5106 4.48182 1.45531 4.66085H4.33971ZM0.974609 4.66086C0.974609 3.99943 2.25576 3.66624 2.89754 3.66624C3.53932 3.66624 4.82047 3.99943 4.82047 4.66086V5.15817H0.974609V4.66086Z"
@@ -50,7 +51,9 @@
           </svg>
         </div>
         <div class="login-input__wrapper">
-          <input type="password" class="login-input" placeholder="Пароль" name="password" />
+          <input type="password" class="login-input" placeholder="Пароль" name="password"
+            pattern="(?=.*\d)(?=.*[a-zA-Z]).{6,30}"
+            title="Пароль должен содержать от 6 до 30 символов и состоять как из букв, так и из цифр" />
           <div class="login-input__eye">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none" class="show">
               <path

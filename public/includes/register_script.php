@@ -10,6 +10,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = trim($_POST['password']);  // Получаем пароль
     $confirm_password = trim($_POST['confirm_password']);  // Получаем подтверждение пароля
 
+
+    // Проверяем, что поля не пустые
+    if (empty($username) || empty($password) || empty($confirm_password)) {
+        $_SESSION['error'] = "Все поля обязательны для заполнения.";
+        header('Location: ../register.php');
+        exit;
+    }
+
+    // Проверяем минимальную длину логина и пароля
+    if (strlen($username) < 5 || strlen($password) < 6) {
+        $_SESSION['error'] = "Логин должен быть не менее 5 символов, пароль не менее 6 символов.";
+        header('Location: ../register.php');
+        exit;
+    }
+
     // Проверяем, совпадают ли пароли
     if ($password !== $confirm_password) {
         $_SESSION['error'] = "Пароли не совпадают.";
