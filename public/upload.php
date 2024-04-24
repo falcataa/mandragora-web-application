@@ -17,18 +17,22 @@ $hashedFileName = hash('sha256', $fileName . time()) . '.' . $imageFileType;
 $target_dir = "uploads/";
 $target_file = $target_dir . $hashedFileName;
 
-
-// Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
-  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-  if($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
-    $uploadOk = 1;
-  } else {
-    echo "File is not an image.";
-    $uploadOk = 0;
-  }
+    if (is_uploaded_file($_FILES["fileToUpload"]["tmp_name"])) {
+        $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+        if($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
+    } else {
+        echo "No file was uploaded.";
+        $uploadOk = 0;
+    }
 }
+
 
 // Check if file already exists
 if (file_exists($target_file)) {
