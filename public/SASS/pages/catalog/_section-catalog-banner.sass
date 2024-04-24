@@ -1,0 +1,40 @@
+.section-catalog-banner
+    padding: 50px 0 
+    background: #E8EDDE
+    &__heading
+        display: flex
+        align-items: center
+        gap: 25px
+        span
+            font-size: 80px
+            font-weight: 400
+            line-height: 120%
+            color: #000
+        h1
+            color: var(--grey-black, #000)
+            font-size: 22px
+            font-weight: 300
+            line-height: 120%
+            transform: translateY(11px)
+
+    &__separator
+        height: 50px
+        width: 1px
+        background: #000
+
+@media all and (max-width: 768px)
+    .section-catalog-banner
+        padding: 30px 0 
+        &__heading
+            flex-direction: column
+            gap: 15px
+            span
+                font-size: 30px
+            h1
+                font-size: 22px
+                transform: translateY(0)
+
+        &__separator
+            height: 1px
+            width: 60px
+            background: #000

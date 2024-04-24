@@ -1,0 +1,177 @@
+.section-single
+    padding: 20px 0 100px
+    background: #fff
+
+    &__back-link
+        display: flex
+        align-items: center
+        gap: 8px
+        margin-bottom: 90px
+        span
+            color: rgba(0, 0, 0, 0.50)
+            font-size: 20px
+            font-weight: 300
+            line-height: normal
+            text-transform: capitalize
+
+    &__box
+        display: flex
+        justify-content: space-between
+
+    &__info
+        max-width: 500px
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 50px
+        height: auto
+    &__title
+        color: var(--grey-black, #000)
+        font-size: 36px
+        font-weight: 500
+        line-height: 120%
+    &__short-desc
+        color: var(--grey-black, #000)
+        font-size: 26px
+        font-weight: 400
+        line-height: 140%
+
+    &__btn
+        margin-top: auto
+
+.single-specifications
+    padding: 50px 0
+    &__tabs
+        display: flex
+        align-items: center
+        gap: 20px
+        border: none
+        overflow-x: scroll
+        width: 100%
+        li
+            width: 100%
+        a
+            margin: 0
+            border: none
+            font-size: 17px
+            &[role=tab][aria-selected=true]
+                background: #A4BE7B
+                border: none
+            &[role=tab]:hover:not([aria-selected=true])
+                border: none 
+                background: #A4BE7B
+
+    &__box
+        display: flex
+        flex-direction: column
+        gap: 30px
+        padding: 30px 0
+    &__tab-title
+        color: #343434
+        font-size: 36px
+        font-weight: 500
+        line-height: 120%
+
+    &__tab-subtitle
+        color: #343434
+        font-size: 26px
+        font-weight: 400
+        line-height: 120%
+
+    &__desc
+        color: var(--Primary, #0D0D0D)
+        font-size: 20px
+        font-weight: 300
+        line-height: 140%
+        column-count: 2
+        column-gap: 15px
+        &_one-column
+            column-count: 1
+
+    &__list
+        list-style: disc
+        padding-left: 20px
+
+    &__points
+        padding-left: 20px
+        list-style: auto
+        li
+            &:not(:last-child)
+                margin-bottom: 15px
+
+
+.specifications-swiper
+    height: 500px
+    width: 100%
+    &__slide
+        border-radius: 15px
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+
+@media all and (max-width: 768px)
+    .section-single
+        padding: 20px 0 50px
+
+        &__back-link
+            margin-bottom: 30px
+            span
+                font-size: 18px
+
+        &__box
+            flex-direction: column
+            gap: 20px
+
+        &__info
+            max-width: 100%
+            flex-direction: column
+            gap: 20px
+        &__title
+            font-size: 20px
+        &__short-desc
+            font-size: 16px
+
+        &__btn
+            margin-top: 0
+
+    .single-specifications
+        padding: 30px 0
+        &__tabs
+            gap: 10px
+            li
+                width: fit-content
+                flex-shrink: 0
+            a
+                font-size: 16px
+
+        &__box
+            gap: 20px
+            padding: 20px 0
+
+        &__tab-title
+            font-size: 22px
+
+        &__tab-subtitle
+            font-size: 20px
+
+        &__desc
+            font-size: 18px
+            column-count: 1
+
+        &__list
+            padding-left: 15px
+
+        &__points
+            padding-left: 15px
+            li
+                &:not(:last-child)
+                    margin-bottom: 10px
+
+
+    .specifications-swiper
+        height: 260px
+        &__slide
+            border-radius: 10px

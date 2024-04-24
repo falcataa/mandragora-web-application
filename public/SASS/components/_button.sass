@@ -1,0 +1,39 @@
+.button
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    padding: 18px 8px
+    border-radius: 8px
+    background: #50806B
+    color: #FFF
+    font-size: 20px
+    font-weight: 700
+    line-height: 100%
+    transition: all .3s ease-in-out
+    border: none
+    outline: none
+    cursor: pointer
+
+@media (hover: hover)
+    .button
+        &:hover
+            background: #62a085
+
+        &:active
+            background: #50806B
+            transform: scale(.95)
+
+
+@media (hover: none)
+    .button
+        &:active
+            background: #50806B
+            transform: scale(.95)
+
+@media all and (max-width: 768px)
+    .button
+        padding: 10px 8px
+        border-radius: 4px
+        font-size: 16px
+        font-weight: 600

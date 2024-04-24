@@ -1,0 +1,95 @@
+.header
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    background: #fff
+    z-index: 100
+    box-shadow: 0px 8px 23px 0px rgba(80, 107, 82, 0.13)
+    &__box
+        padding: 12px 0
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 20px
+    &__logo
+        font-size: 26px
+        line-height: 100%
+        font-weight: 700
+        color: #50806B
+
+    &__right
+        display: flex
+        align-items: center
+        gap: 25px
+        width: 100%
+        max-width: 435px
+        transition: max-width 300ms ease-in-out
+        &.is_active
+            max-width: 100%
+
+
+    &__separator
+        height: 30px
+        width: 1px
+        background: #979797
+
+.profile
+    display: flex
+    align-items: center
+    gap: 15px
+    &__img-wrapper
+        width: 35px
+        height: 35px
+        border-radius: 50%
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+
+    &__name
+        font-size: 16px
+        line-height: 100%
+        font-weight: 400
+        color: #000
+
+
+
+@media all and (max-width: 768px)
+    .header
+        &__box
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            row-gap: 15px
+            column-gap: 10px
+            position: relative
+            padding: 10px 0
+
+        &__logo
+            position: relative
+            top: 5px
+            font-size: 20px
+
+        &__right
+            gap: 10px
+            grid-column: span 2
+            max-width: 100%
+
+        &__separator
+            height: 20px
+            display: none
+
+    .profile
+        gap: 3px
+        position: absolute
+        right: 0
+        top: 13px
+
+        &__name
+            font-size: 12px
+
+        &__img-wrapper
+            width: 25px
+            height: 25px

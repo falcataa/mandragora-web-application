@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Mandragora | растения" />
+    <meta
+      property="og:description"
+      content="Дипломный проект | сделанный Акылбеком и Рабигой"
+    />
+    <meta
+      name="description"
+      content="Дипломный проект | сделанный Акылбеком и Рабигой"
+    />
+    <title>Название Растения | Mandragora</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/css/tabby-ui.min.css"
+    />
+    <link rel="stylesheet" href="src/fonts/Gilroy/stylesheet.css" />
+    <link rel="stylesheet" href="src/fonts/Inter/stylesheet.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__box">
+          <div class="header__logo">Mandragora</div>
+
+          <div class="header__right">
+            <form class="search-form">
+              <input
+                type="search"
+                class="search-form__input"
+                placeholder="Найти растение"
+              />
+              <button class="search-form__submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11ZM18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L18.0319 16.6177Z"
+                    fill="#35383F"
+                  />
+                </svg>
+              </button>
+            </form>
+            <div class="header__separator"></div>
+            <a href="#" class="profile">
+              <div class="profile__img-wrapper">
+                <img src="src/img/user.webp" alt="user" />
+              </div>
+              <div class="profile__name">Akylbek</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section-profile">
+        <div class="container">
+          <div class="section-profile__box">
+            <div class="section-profile__left">
+              <div class="section-profile__avatar-wrapper">
+                <img
+                  class="section-profile__avatar-img"
+                  src="src/img/avatar.webp"
+                  alt="mandragora"
+                />
+              </div>
+              <a href="settings.html" class="button"> Редактировать профиль </a>
+            </div>
+            <div class="section-profile__right">
+              <div class="section-profile__info">
+                <div class="section-profile__info-top">
+                  <div class="section-profile__name">Сияз Дархан</div>
+                </div>
+                <div class="section-profile__info-bottom">
+                  <div class="section-profile__secondary-info">
+                    <h3>Дата регистрации:</h3>
+                    <p>23.10.2000</p>
+                    <h3>Город:</h3>
+                    <p>New York</p>
+                    <h3>Номер телефона:</h3>
+                    <a href="tel:+7 777 777 77 77">+7 777 777 77 77</a>
+                    <h3>Почта:</h3>
+                    <a href="mailto:dms18@tpu.ru">dms18@tpu.ru</a>
+                  </div>
+                </div>
+              </div>
+              <div class="section-profile__posts">
+                <div class="section-profile__title">Ваши посты</div>
+                <div
+                  class="section-profile__posts-box section-profile__posts-box_no-posts"
+                >
+                  <img
+                    class="section-profile__posts-no-image"
+                    src="src/img/posts-no.webp"
+                    alt="mandragora"
+                  />
+                  <div class="section-profile__posts-desc">
+                    У вас еще нет постов
+                  </div>
+                  <button
+                    class="button section-profile__posts-btn modal-add-post__caller"
+                  >
+                    Добавить пост
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__box">
+          <div class="footer__first">
+            Дипломный проект <span>Mandragora</span>
+          </div>
+          <div class="footer__second">Авторы: Акылбек и Рабига</div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-add-post">
+      <div class="modal-add-post__box">
+        <div class="modal-add-post__content">
+          <button class="button modal-add-post__close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+            >
+              <path
+                d="M1 1L33 33"
+                stroke="white"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M33 1L1 33"
+                stroke="white"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <form class="modal-add-post__form">
+            <div class="modal-add-post__input-wrapper">
+              <label
+                for="modal-add-post__label_title"
+                class="modal-add-post__label"
+              >
+                Название поста
+              </label>
+              <input
+                id="modal-add-post__label_title"
+                type="text"
+                class="modal-add-post__input"
+                placeholder="Введите название поста"
+              />
+            </div>
+            <div class="modal-add-post__input-wrapper">
+              <label for="modal-add-post__desc" class="modal-add-post__label">
+                Описание поста
+              </label>
+              <textarea
+                id="modal-add-post__desc"
+                class="modal-add-post__input modal-add-post__textarea"
+                placeholder="Введите описание поста"
+              ></textarea>
+            </div>
+            <div class="modal-add-post__input-wrapper">
+              <label class="modal-add-post__label_img" for="post-img">
+                <span class="modal-add-post__span"></span>
+              </label>
+              <input type="file" id="post-img" />
+            </div>
+
+            <button class="button" type="submit">Опубликовать пост</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/js/tabby.polyfills.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swipers.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.section-catalog
+    padding: 50px 0
+
+    &__box
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: 24px
+        row-gap: 22px
+
+
+@media all and (max-width: 768px)
+    .section-catalog
+        padding: 60px 0
+
+        &__box
+            grid-template-columns: repeat(2, 1fr)
+            column-gap: 8px
+            row-gap: 12px
+            

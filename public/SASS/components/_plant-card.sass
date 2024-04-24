@@ -1,0 +1,81 @@
+.plant-card
+    display: flex
+    flex-direction: column
+    gap: 16px
+    width: 100%
+    height: 100%
+    padding: 20px
+    border-radius: 16px
+    background: #FFF
+    box-shadow: 0px 8px 23px 0px rgba(80, 107, 82, 0.13)
+    transition: box-shadow 300ms ease-in-out
+    &__img-wrapper
+        height: 175px
+        width: 100%
+        border-radius: 8px
+        overflow: hidden
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: contain
+        transition: transform 500ms ease
+    &__bottom
+        display: flex
+        flex-direction: column
+        gap: 4px
+
+    &__title
+        color: #343434
+        font-size: 20px
+        font-weight: 700
+        line-height: 100%
+        width: 100%
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+    &__desc
+        color: #343434
+        font-size: 18px
+        font-weight: 400
+        line-height: 120%
+
+            
+
+
+@media (hover: hover)
+    .plant-card
+        &:hover
+            box-shadow: 0px 10px 20px 0px rgba(80, 107, 82, 0.4)
+            .plant-card__img
+                transform: scale(1.15)
+
+        &:active
+            .plant-card__img
+                transform: scale(1)
+
+@media (hover: none)
+    .plant-card
+        &:active
+            box-shadow: 0px 10px 20px 0px rgba(80, 107, 82, 0.4)
+            .plant-card__img
+                transform: scale(1.15)
+
+
+@media all and (max-width: 768px)
+    .plant-card
+        gap: 8px
+        padding: 10px
+        border-radius: 8px
+        &__img-wrapper
+            height: 125px
+            border-radius: 4px
+
+        &__title
+            font-size: 16px
+            font-weight: 600
+
+        &__desc
+            font-size: 14px

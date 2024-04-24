@@ -1,0 +1,125 @@
+.section-login
+    position: relative
+    height: 100vh
+    background-image: url("../src/img/login.webp")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+    &__box
+        width: 40vw
+        height: 100%
+        background: rgba(255, 255, 255, 0.10)
+        border-right: 2px solid#FFF
+        padding-inline: 20px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    &__form
+        display: flex
+        flex-direction: column
+        gap: 50px
+        width: 100%
+
+    &__heading
+        color: #FFF
+        font-size: 56px
+        font-weight: 900
+        line-height: 100%
+        margin-bottom: 50px
+
+    &__btn
+        display: block
+        padding: 0
+        border: 1px solid transparent
+        border-radius: 10px
+        padding: 20px
+        background: #cfd8dcad
+        font-size: 18px
+        line-height: 100%
+        font-weight: 700
+        text-transform: uppercase
+        color: #2A2A2A
+        cursor: pointer
+        transition: border 200ms ease-in-out, border 400ms ease-in-out, color 300ms ease-in-out, transform 200ms ease
+
+    &__register
+        margin-top: 20px
+        a
+            font-size: 18px
+            line-height: 100%
+            font-weight: 300
+            color: #fff
+
+
+
+.login-input
+    background: transparent
+    border: none
+    outline: none
+    font-size: 18px
+    line-height: 100%
+    font-weight: 300
+    color: #fff
+    padding-bottom: 15px
+    border-bottom: 1px solid #fff
+    width: 100%
+    &::placeholder
+        color: #FFF
+
+    &__wrapper
+        position: relative
+
+        svg
+            position: absolute
+            top: 0
+            right: 0
+            width: 25px
+            height: 25px
+
+    &__eye
+        cursor: pointer
+        user-select: none
+        svg.show
+            display: none
+
+
+@media (hover: hover)
+    .section-login__btn
+        &:hover
+            border: 1px solid #cfd8dcad
+            background: #cfd8dc55
+            color: #fff
+        &:active
+            transform: scale(.95)
+
+
+@media (hover: none)
+    .section-login__btn
+        &:active
+            transform: scale(.95)
+            border: 1px solid #cfd8dcad
+            background: #cfd8dc55
+            color: #fff
+
+
+@media all and (max-width: 768px)
+    .section-login
+
+        &__box
+            width: 100%
+            padding-inline: 16px
+            border: none
+
+        &__form
+            gap: 40px
+
+        &__heading
+            font-size: 30px
+            margin-bottom: 40px
+
+        &__btn
+            border-radius: 5px
+            padding: 15px

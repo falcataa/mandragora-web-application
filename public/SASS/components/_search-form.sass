@@ -1,0 +1,65 @@
+.search-form
+    display: flex
+    align-items: center
+    background: #E8EDDE
+    border-radius: 12px
+    overflow: hidden
+    width: 100%
+    transition: width 300ms ease-in-out
+    &__input
+        color: #000
+        border: none
+        outline: none
+        padding: 0
+        background: transparent
+        padding: 10px 15px
+        font-size: 16px
+        line-height: 100%
+        flex: 1
+
+    &__submit
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0
+        border: none
+        outline: none
+        background: transparent
+        cursor: pointer
+        padding: 10px 15px
+        transition: background 200ms ease-in-out
+        svg
+            transition: transform 200ms ease-in-out
+
+
+@media (hover: hover)
+    .search-form__submit
+        &:hover
+            background: #c1d59b
+            svg
+                transform: scale(1.1)
+        &:active
+            svg
+                transform: scale(1)
+
+@media (hover: none)
+    .search-form__submit
+        &:active
+            background: #c1d59b
+            svg
+                transform: scale(1.1)
+
+
+
+@media all and (max-width: 768px)
+    .search-form
+        border-radius: 6px
+        &__input
+            padding: 5px 7px
+            font-size: 14px
+
+        &__submit
+            padding: 5px 7px
+            svg
+                width: 20px
+                height: 20px

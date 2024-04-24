@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Mandragora | растения" />
+    <meta
+      property="og:description"
+      content="Дипломный проект | сделанный Акылбеком и Рабигой"
+    />
+    <meta
+      name="description"
+      content="Дипломный проект | сделанный Акылбеком и Рабигой"
+    />
+    <title>Название Растения | Mandragora</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/css/tabby-ui.min.css"
+    />
+    <link rel="stylesheet" href="src/fonts/Gilroy/stylesheet.css" />
+    <link rel="stylesheet" href="src/fonts/Inter/stylesheet.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__box">
+          <div class="header__logo">Mandragora</div>
+
+          <div class="header__right">
+            <form class="search-form">
+              <input
+                type="search"
+                class="search-form__input"
+                placeholder="Найти растение"
+              />
+              <button class="search-form__submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11ZM18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L18.0319 16.6177Z"
+                    fill="#35383F"
+                  />
+                </svg>
+              </button>
+            </form>
+            <div class="header__separator"></div>
+            <a href="#" class="profile">
+              <div class="profile__img-wrapper">
+                <img src="src/img/user.webp" alt="user" />
+              </div>
+              <div class="profile__name">Akylbek</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section-catalog-banner">
+        <div class="container">
+          <div class="section-catalog-banner__heading">
+            <span> Растение </span>
+            <div class="section-catalog-banner__separator"></div>
+            <h1>Marble Queen Pothos</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-single">
+        <div class="container">
+          <a href="catalog.html" class="section-single__back-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="8"
+              height="12"
+              viewBox="0 0 8 12"
+              fill="none"
+            >
+              <path
+                d="M8 1.41L3.41 6L8 10.59L6.58 12L0.58 6L6.58 -6.20702e-08L8 1.41Z"
+                fill="#343434"
+                fill-opacity="0.6"
+              />
+            </svg>
+            <span>каталог</span>
+          </a>
+          <div class="section-single__box">
+            <div class="plant-swipers-wrapper">
+              <div class="swiper-plants-thumbs">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-plants-thumbs__slide">
+                    <img src="src/img/plant-1.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide swiper-plants-thumbs__slide">
+                    <img src="src/img/plant-2.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide swiper-plants-thumbs__slide">
+                    <img src="src/img/plant-3.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide swiper-plants-thumbs__slide">
+                    <img src="src/img/plant-4.webp" alt="mandragora" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-plants">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-plants__slide">
+                    <img src="src/img/plant-1.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide swiper-plants__slide">
+                    <img src="src/img/plant-2.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide swiper-plants__slide">
+                    <img src="src/img/plant-3.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide swiper-plants__slide">
+                    <img src="src/img/plant-4.webp" alt="mandragora" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-single__info">
+              <div class="section-single__title">Marble Queen Pothos</div>
+              <div class="section-single__short-desc">
+                Marble queen pothos is a popular houseplant that is known for
+                its beautiful foliage. It is a relatively easy plant to care
+                for, making it a good choice for beginners.
+              </div>
+              <a
+                href="#single-specifications"
+                class="section-single__btn button"
+              >
+                Смотреть характеристики
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="single-specifications" id="single-specifications">
+        <div class="container">
+          <ul class="single-specifications__tabs" data-tabs>
+            <li>
+              <a class="button" data-tabby-default href="#origin"
+                >Происхождение</a
+              >
+            </li>
+            <li><a class="button" href="#care">Уход за растением</a></li>
+            <li><a class="button" href="#science">Научные данные</a></li>
+            <li><a class="button" href="#transfer">Пересадка</a></li>
+          </ul>
+
+          <div id="origin">
+            <div class="single-specifications__box">
+              <div class="single-specifications__tab-title">
+                Происхождение растения
+              </div>
+              <div class="single-specifications__desc">
+                "Мраморная королева Потос" является одной из наиболее популярных
+                и эстетически привлекательных разновидностей популярного в
+                комнатной культуре растения Потос. Этот вид – культивар
+                тропического растения Epipremnum aureum, которое первоначально
+                происходит из Юго-Восточной Азии и островов Тихого океана. В
+                природе эти растения обычно растут в тропических лесах, цепляясь
+                за деревья и кустарники своими вьющимися стеблями.
+                <br />
+                <br />
+                Epipremnum aureum известен своей способностью адаптироваться к
+                разнообразным условиям окружающей среды, благодаря чему он
+                получил широкое распространение как домашнее растение.
+                "Мраморная королева" выделяется своими красивыми листьями с
+                белыми или светло-зелёными мраморными узорами, которые делают
+                каждый лист уникальным. Эта разновидность была выведена путем
+                селекции, при которой основным критерием была необычная окраска
+                листьев.
+                <br />
+                <br />
+                Как и все потосы, "Мраморная королева" легко адаптируется к
+                условиям в помещениях, предпочитая яркий рассеянный свет и
+                умеренный полив. Она способна вырастать в весьма внушительные
+                размеры при правильном уходе, что делает её популярным выбором
+                для декорирования интерьеров.
+                <br />
+                <br />
+                Культивирование "Мраморной королевы" началось относительно
+                недавно, но благодаря своей декоративности и неприхотливости
+                растение быстро завоевало любовь садоводов и дизайнеров
+                интерьеров по всему миру. Сегодня это растение можно встретить
+                не только в домах и офисах, но и в крупных ботанических садах,
+                где оно демонстрирует свою красоту в полной мере.
+              </div>
+            </div>
+          </div>
+          <div id="care">
+            <div class="single-specifications__box">
+              <div class="single-specifications__tab-title">
+                Уход за растением
+              </div>
+              <div class="single-specifications__tab-subtitle">Полив</div>
+              <div
+                class="single-specifications__desc single-specifications__desc_one-column"
+              >
+                "Мраморная королева" предпочитает умеренный полив. Перед
+                следующим поливом верхний слой почвы должен подсохнуть примерно
+                на 2-3 см. Избегайте застоя воды в поддоне, так как это может
+                привести к загниванию корней. В зимний период полив следует
+                сократить, поддерживая почву слегка влажной.
+              </div>
+              <div class="single-specifications__tab-subtitle">
+                Солнечный свет
+              </div>
+              <div
+                class="single-specifications__desc single-specifications__desc_one-column"
+              >
+                Этот вид потоса любит яркий, но рассеянный свет. Прямые
+                солнечные лучи могут вызвать ожоги на листьях, в то время как
+                недостаток света приведет к потере контрастности узора на
+                листьях. Идеальное местоположение – вблизи окна,
+                ориентированного на восток или запад, где растение будет
+                получать достаточное количество света без прямого солнца.
+              </div>
+              <div class="single-specifications__tab-subtitle">
+                Почва и удобрения
+              </div>
+              <div
+                class="single-specifications__desc single-specifications__desc_one-column"
+              >
+                Для "Мраморной королевы" подходит легкая, хорошо дренируемая
+                почва. Используйте смесь для комнатных растений с добавлением
+                перлита или вермикулита для улучшения аэрации и дренажа. В
+                теплые месяцы (весна-лето) удобряйте растение раз в месяц
+                комплексным удобрением для декоративно-лиственных растений.
+                Зимой удобрения вносить не рекомендуется.
+              </div>
+              <div class="single-specifications__tab-subtitle">Токсичность</div>
+              <div
+                class="single-specifications__desc single-specifications__desc_one-column"
+              >
+                Потосы токсичны при употреблении внутрь, так как содержат
+                оксалат кальция. Это может вызвать раздражение слизистой
+                оболочки рта и желудка, а в тяжелых случаях - отек горла.
+                Старайтесь держать растение вне досягаемости маленьких детей и
+                домашних животных, особенно кошек и собак, которые могут
+                попытаться погрызть его листья.
+                <br />
+                <br />
+                Соблюдение этих простых правил ухода поможет вашей "Мраморной
+                королеве Потос" оставаться здоровой и красивой, обеспечивая ей
+                оптимальные условия для роста и развития.
+              </div>
+            </div>
+          </div>
+          <div id="science">
+            <div class="single-specifications__box">
+              <div class="single-specifications__tab-title">
+                Научные данные о растении
+              </div>
+              <div class="single-specifications__tab-subtitle">
+                Классификация:
+              </div>
+              <div
+                class="single-specifications__desc single-specifications__desc_one-column"
+              >
+                <ul class="single-specifications__list">
+                  <li>Царство: Plantae – Растения</li>
+                  <li>Отдел: Angiosperms – Покрытосеменные</li>
+                  <li>Класс: Monocots – Однодольные</li>
+                  <li>Порядок: Alismatales – Водолюбивые</li>
+                  <li>Семейство: Araceae – Ароидные</li>
+                  <li>Род: Epipremnum</li>
+                  <li>Вид: Epipremnum aureum</li>
+                </ul>
+              </div>
+              <div class="single-specifications__tab-subtitle">Описание:</div>
+              <div
+                class="single-specifications__desc single-specifications__desc_one-column"
+              >
+                Epipremnum aureum, известный как Золотой плющ или Потос,
+                является широко распространенным внутрикомнатным растением,
+                произрастающим в тропических и субтропических лесах
+                Юго-Восточной Азии и на островах Тихого океана. "Мраморная
+                королева" – это одна из популярных культурных форм с характерной
+                мраморной окраской листьев.
+              </div>
+              <div class="single-specifications__tab-subtitle">
+                Ботанические особенности:
+              </div>
+              <div
+                class="single-specifications__desc single-specifications__desc_one-column"
+              >
+                "Мраморная королева" характеризуется крупными листьями
+                сердцевидной формы с глянцевой поверхностью, которые покрыты
+                белыми или светло-зелеными вкраплениями, создающими мраморный
+                узор. Растение вьющееся, что позволяет ему лазить по опорам или
+                свисать вниз в случае отсутствия опоры.
+              </div>
+              <div class="single-specifications__tab-subtitle">
+                Физиологические исследования:
+              </div>
+              <div
+                class="single-specifications__desc single-specifications__desc_one-column"
+              >
+                Исследования показывают, что Epipremnum aureum способен улучшать
+                качество воздуха в помещении, абсорбируя такие вредные вещества,
+                как бензол, формальдегид и другие летучие органические
+                соединения. Особенно эффективно растение справляется с очисткой
+                воздуха в условиях низкой освещенности, что делает его идеальным
+                для использования в квартирах и офисных помещениях.
+              </div>
+              <div class="single-specifications__tab-subtitle">
+                Генетические исследования:
+              </div>
+              <div
+                class="single-specifications__desc single-specifications__desc_one-column"
+              >
+                Научные исследования по изучению генетической структуры
+                Epipremnum aureum показывают, что различные культурные формы,
+                включая "Мраморную королеву", могут обладать некоторыми
+                уникальными генетическими маркерами, что может способствовать их
+                адаптации к разнообразным условиям выращивания. Такие
+                исследования помогают улучшать методы размножения и селекции
+                растений для достижения оптимального декоративного вида и
+                устойчивости.
+              </div>
+            </div>
+          </div>
+          <div id="transfer">
+            <div class="single-specifications__box">
+              <div class="single-specifications__tab-title">
+                Подготовка к пересадке
+              </div>
+              <div class="specifications-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide specifications-swiper__slide">
+                    <img src="src/img/transfer-1.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide specifications-swiper__slide">
+                    <img src="src/img/transfer-2.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide specifications-swiper__slide">
+                    <img src="src/img/transfer-3.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide specifications-swiper__slide">
+                    <img src="src/img/transfer-4.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide specifications-swiper__slide">
+                    <img src="src/img/transfer-5.webp" alt="mandragora" />
+                  </div>
+                  <div class="swiper-slide specifications-swiper__slide">
+                    <img src="src/img/transfer-6.webp" alt="mandragora" />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="single-specifications__desc single-specifications__desc_one-column"
+              >
+                <ol class="single-specifications__points">
+                  <li>
+                    <p>
+                      Полив: Хорошо полейте растение за день до пересадки, чтобы
+                      корни легко отделялись от стенок горшка.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Извлечение растения: Аккуратно вытяните растение из
+                      старого горшка, стараясь не повредить корни.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Осмотр корней: Осмотрите корни на предмет повреждений или
+                      признаков болезни. Обрежьте все поврежденные или гнилые
+                      корни стерильным инструментом.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Очистка корней: Очистите корни от старой почвы, аккуратно
+                      стряхивая её или промывая водой.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Наполнение горшка: На дно нового горшка насыпьте слой
+                      свежей дренирующей почвы.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Посадка: Поместите растение в центр горшка и добавьте
+                      почву вокруг корней, легко утрамбовывая её, чтобы избежать
+                      воздушных карманов.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Дренаж: Убедитесь, что почва не блокирует дренажные
+                      отверстия.
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__box">
+          <div class="footer__first">
+            Дипломный проект <span>Mandragora</span>
+          </div>
+          <div class="footer__second">Авторы: Акылбек и Рабига</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/js/tabby.polyfills.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swipers.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
