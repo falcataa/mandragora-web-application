@@ -71,6 +71,11 @@ while (isset($_FILES['TransplantationImage'.$i]) && is_uploaded_file($_FILES['Tr
 
 function processImage($file, $dbh, $fileName) {
     try{
+
+        if ($fileName === null || empty($fileName)) {
+            $fileName = mt_rand() . time();
+        }
+
         // Get extension of the file
         $imageFileType = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
 
