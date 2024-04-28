@@ -46,8 +46,8 @@ for ($i = 0; $i < count($_FILES['fileToUpload']['name']); $i++) {
 }
 
 $i = 1;
-while (isset($_FILES['TransplantationImage'.$i])) {
-    if (is_uploaded_file($_FILES['TransplantationImage'.$i]['tmp_name'])) {
+while (is_uploaded_file($_FILES['TransplantationImage'.$i]['tmp_name'])) {
+    
         $TransplantationImageFile = [
             'name'      => $_FILES['TransplantationImage'.$i]['name'],
             'type'      => $_FILES['TransplantationImage'.$i]['type'],
@@ -65,7 +65,6 @@ while (isset($_FILES['TransplantationImage'.$i])) {
         $stmt->bindParam(':transplantationImage', $TransplantationImage);
         $stmt->bindParam(':transplantationDescription', $TransplantationDescription);
         $stmt->execute();
-    }
     $i++;
     echo $i;
 }

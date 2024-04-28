@@ -34,7 +34,6 @@ function addTransplantationStep() {
 </head>
 
   <body>
-    <body>
   <form action="upload.php" method="post" enctype="multipart/form-data" class="center-form">
     Добавьте фото растения (выберите сразу все фотографии):
     <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
