@@ -17,7 +17,9 @@ if (!isset($_SESSION['admin'])) {
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   const upload_status = urlParams.get('upload_status');
-  alert(upload_status);
+  if (upload_status != null){
+    alert(upload_status);
+  }
 </script>
 
 <script>
