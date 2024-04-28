@@ -95,7 +95,9 @@ if (!isset($_SESSION['admin'])) {
             <input type="textarea" name="flowerName" id="flowerName" style="width:200px;">
 
             Описание:
-            <input type="textarea" name="flowerDescription" id="flowerDescription" style="width:200px; height:50px;">
+            <!-- <input type="textarea" name="flowerDescription" id="flowerDescription" > -->
+            <textarea name="flowerDescription" id="flowerDescription" cols="30" rows="10"
+                style="width:200px; height:50px; overflow: scroll;"></textarea>
 
             Происхождение:
             <input type="textarea" name="plantOrigin" id="plantOrigin" style="width:200px; height:50px;">
