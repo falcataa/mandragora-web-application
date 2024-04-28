@@ -129,7 +129,7 @@ function processImage($file, $dbh, $fileName) {
                 echo "The file ". basename($hashedFileName). " has been uploaded.\n";
                 return $hashedFileName;
             } else {
-                header("Location: admin.php?upload_status=Фото не загружено из-за ошибки: Sorry, your file was not uploaded.");
+                header("Location: admin.php?upload_status=Фото не загружено из-за ошибки: Sorry, your file was not uploaded2s");
                 exit;
             }
         }
