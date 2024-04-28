@@ -27,8 +27,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<form method="POST">
-    <input type="text" name="login" placeholder="Логин">
-    <input type="password" name="password" placeholder="Пароль">
-    <input type="submit" value="Войти">
-</form>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Login</title>
+        <link rel="stylesheet" type="text/css" href="./css/admin-style.css">
+    </head>
+
+    <body>
+        <form method="POST" class="center-form">
+            <input type="text" name="login" placeholder="Логин">
+            <input type="password" name="password" placeholder="Пароль">
+            <input type="submit" value="Войти">
+        </form>
+    </body>
+</html>
