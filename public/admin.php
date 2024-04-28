@@ -4,10 +4,6 @@ if (!isset($_SESSION['admin'])) {
     header('Location: admin_login.php');
     exit;
 }
-
-$exampleParam = $_GET['upload_status'];
-if ($exampleParam == '' || $exampleParam == null) {}
-else {echo $exampleParam;}
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,6 +13,12 @@ else {echo $exampleParam;}
 
   <title>Admin Panel</title>
   <link rel="stylesheet" type="text/css" href="./css/admin-style.css?<?php echo uniqid(); ?>">
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const upload_status = urlParams.get('upload_status');
+  alert(upload_status);
+</script>
 
 <script>
 let stepCount = 2;
