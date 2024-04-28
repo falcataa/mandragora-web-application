@@ -22,7 +22,7 @@ if (isset($_POST['delete'])) {
     $stmt->execute();
 
     // Перенаправление обратно на страницу после удаления
-    header("Location: admin.php?upload_status=Successfully uploaded image with id: $lastId");
+    header("Location: admin.php?upload_status=Successfully deleted post with id: $post_id");
     exit;
 }
 ?>
