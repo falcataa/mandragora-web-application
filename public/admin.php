@@ -13,18 +13,36 @@ if (!isset($_SESSION['admin'])) {
   </head>
 
   <body>
-    <form action="upload.php" method="post" enctype="multipart/form-data" class="center-form">
-      Select image to upload:
-      <input type="file" name="fileToUpload" id="fileToUpload">
-      File name:
-      <input type="text" name="fileName" id="fileName">
-      Description:
-      <input type="text" name="description" id="description">
+    <body>
+  <form action="upload.php" method="post" enctype="multipart/form-data" class="center-form">
+    Select images to upload (you can select multiple images):
+    <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
 
-      <input type="hidden" name="user_id" id="user_id" value="0">
+    Flower name:
+    <input type="text" name="flowerName" id="flowerName">
 
-      <input type="submit" value="Upload Image" name="submit">
-    </form>
+    Flower description:
+    <input type="text" name="flowerDescription" id="flowerDescription">
+
+    Plant origin:
+    <input type="text" name="plantOrigin" id="plantOrigin">
+
+    Plant care:
+    <input type="text" name="plantCare" id="plantCare">
+
+    Scientific data:
+    <input type="text" name="scientificData" id="scientificData">
+
+    Select another image to upload:
+    <input type="file" name="anotherFileToUpload" id="anotherFileToUpload">
+
+    Another image description:
+    <input type="text" name="anotherImageDescription" id="anotherImageDescription">
+
+    <input type="submit" value="Upload Image" name="submit">
+  </form>
+</body>
+
   </body>
 
 </html>

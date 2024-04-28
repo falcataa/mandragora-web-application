@@ -7,7 +7,6 @@ error_reporting(E_ALL);
 // Get post data
 $fileName = $_POST['fileName'];
 $description = $_POST['description'];
-$author = $_POST['user_id'];;
 
 // Get extension of the file
 $imageFileType = strtolower(pathinfo($_FILES["fileToUpload"]["name"], PATHINFO_EXTENSION));
@@ -61,10 +60,9 @@ if ($uploadOk == 0) {
 } else {
   $dbh = new PDO('mysql:host=localhost;dbname=mandragora', 'dev', 'DarkhanBestProgrammerSuckHisDIck!!_27');
 
-  $stmt = $dbh->prepare("INSERT INTO plants (user_id, title, description, image_url)
-                       VALUES (:user_id, :title, :description, :filename)");
+  $stmt = $dbh->prepare("INSERT INTO plants (title, description, image_url)
+                       VALUES (:title, :description, :filename)");
 
-  $stmt->bindParam(':user_id', $author);
   $stmt->bindParam(':title', $description);
   $stmt->bindParam(':description', $description);
   $stmt->bindParam(':filename', $hashedFileName);
