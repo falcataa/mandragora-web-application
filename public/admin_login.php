@@ -14,17 +14,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($query->rowCount() > 0) {
         $admin = $query->fetch(PDO::FETCH_ASSOC);
 
-        if (password_verify($password, $admin['password'])) {
+       if (password_verify($password, $admin['password'])) {
             $_SESSION['admin'] = $admin;
             header('Location: admin.php');
             exit;
         } else {
-            echo 'Неправильный пароль';
+            $_SESSION['error'] = 'Неправильный пароль';
+            header('Location: admin_login.php');
+            exit;
         }
     } else {
         echo 'Неправильный логин';
     }
 }
+if (isset($_SESSION['error'])) {
+    echo $_SESSION['error'];
+    unset($_SESSION['error']);}
 ?>
 
 <!DOCTYPE html>
