@@ -97,7 +97,7 @@ function processImage($file, $dbh, $fileName) {
             $uploadOk = 0;
         }
     }
-
+    clearstatcache();
     // Check if file already exists
     if (file_exists($target_file)) {
         echo File already exists.";
