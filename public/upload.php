@@ -67,6 +67,7 @@ while (isset($_FILES['TransplantationImage'.$i])) {
         $stmt->execute();
     }
     $i++;
+    echo $i
 }
 
 
