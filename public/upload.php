@@ -46,7 +46,7 @@ for ($i = 0; $i < count($_FILES['fileToUpload']['name']); $i++) {
 }
 
 $i = 1;
-while (is_uploaded_file($_FILES['TransplantationImage'.$i]['tmp_name'])) {
+while (isset($_FILES['TransplantationImage'.$i]) && is_uploaded_file($_FILES['TransplantationImage'.$i]['tmp_name'])) {
     
         $TransplantationImageFile = [
             'name'      => $_FILES['TransplantationImage'.$i]['name'],
