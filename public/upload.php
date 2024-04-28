@@ -95,7 +95,8 @@ function processImage($file, $dbh, $fileName) {
                     $uploadOk = 1;
                 } else {
                     echo "File is not an image.\n";
-                    $uploadOk = 0;
+                    header("Location: admin.php?upload_status=Фото не загружено из-за ошибки: File is not an image.");
+                    exit;
                 }
             } else {
                 echo "No file was uploaded.\n";
@@ -111,31 +112,32 @@ function processImage($file, $dbh, $fileName) {
 
         // Check file size
         if ($file["size"] > 500000) {
-            echo "Sorry, your file is too large.\n";
-            $uploadOk = 0;
+            header("Location: admin.php?upload_status=Фото не загружено из-за ошибки: Sorry, your file is too large.");
+            exit;
         }
 
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
         && $imageFileType != "gif" ) {
-            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.\n";
-            $uploadOk = 0;
+
+            header("Location: admin.php?upload_status=Фото не загружено из-за ошибки: Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
+            exit;
         }
 
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.\n";
+            header("Location: admin.php?upload_status=Фото не загружено из-за ошибки: Sorry, your file was not uploaded.");
+            exit;
         // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($file["tmp_name"], $target_file)) {
                 echo "The file ". basename($hashedFileName). " has been uploaded.\n";
                 return $hashedFileName;
             } else {
-                echo "Sorry, there was an error uploading your file.\n";
+                header("Location: admin.php?upload_status=Фото не загружено из-за ошибки: Sorry, your file was not uploaded.");
+                exit;
             }
         }
-
-        return null;
         }
        catch (Exception $e) {
     // Обработка исключения
