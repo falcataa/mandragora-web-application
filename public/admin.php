@@ -82,7 +82,7 @@ function confirmDelete() {
 </head>
 
 <body>
-<div style="float:left; margin-left:20px;">
+<div class="left-div">
   <h2>Загрузить растения</h2>
     <form action="upload.php" method="post" enctype="multipart/form-data" class="center-form">
       Добавьте фото растения (выберите сразу все фотографии):
@@ -118,7 +118,7 @@ function confirmDelete() {
 </div>
 
 
-    <div style="float:right; margin-right:20px;"> 
+    <div class="right-div"> 
         <h2>Данные о растениях</h2>
         <table>
             <tr>
