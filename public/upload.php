@@ -110,12 +110,6 @@ function processImage($file, $dbh, $fileName) {
             return $hashedFileName;
         }
 
-        // Check file size
-        if ($file["size"] > 500000) {
-            header("Location: admin.php?upload_status=Фото не загружено из-за ошибки: Sorry, your file is too large.");
-            exit;
-        }
-
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
         && $imageFileType != "gif" ) {
