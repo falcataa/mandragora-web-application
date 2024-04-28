@@ -9,7 +9,7 @@ body {
 .center-form {
     overflow-y: auto;
     max-height: 100vh;
-    margin-top: -50px;
+    margin-top: 50px;
 }
 
 .center-form input {
