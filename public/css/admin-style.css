@@ -38,14 +38,16 @@ body {
     float: left;
     margin-left: 40px; /* Increase the left margin to move it further left */
     width: calc(50% - 40px); /* Adjust the width to make space for the right div */
-    /* background-color: lightblue;  */
+    color: white;
+
 }
 
 .right-div {
     float: right;
     margin-right: 40px; /* Increase the right margin to move it further right */
     width: calc(50% - 40px); /* Adjust the width to make space for the left div */
-    /* background-color: lightcoral; */
+    color: white;
+
 }
 
 .clearfix::after {
