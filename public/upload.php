@@ -100,7 +100,7 @@ function processImage($file, $dbh, $fileName) {
     clearstatcache();
     // Check if file already exists
     if (file_exists($target_file)) {
-        echo File already exists.";
+        echo "File already exists.";
         return $hashedFileName;
     }
 
