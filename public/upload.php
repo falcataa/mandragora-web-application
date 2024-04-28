@@ -82,18 +82,19 @@ function processImage($file, $dbh, $fileName) {
         $target_file = $target_dir . $hashedFileName;
 
         // Check if image file is a actual image or fake image
+        echo "Check if image file is a actual image or fake image: ";
         if(isset($_POST["submit"])) {
             if (is_uploaded_file($file["tmp_name"])) {
                 $check = getimagesize($file["tmp_name"]);
                 if($check !== false) {
-                    echo "File is an image - " . $check["mime"] . ".";
+                    echo "File is an image - " . $check["mime"] . ".\n";
                     $uploadOk = 1;
                 } else {
-                    echo "File is not an image.";
+                    echo "File is not an image.\n";
                     $uploadOk = 0;
                 }
             } else {
-                echo "No file was uploaded.";
+                echo "No file was uploaded.\n";
                 $uploadOk = 0;
             }
         }
@@ -106,27 +107,27 @@ function processImage($file, $dbh, $fileName) {
 
         // Check file size
         if ($file["size"] > 500000) {
-            echo "Sorry, your file is too large.";
+            echo "Sorry, your file is too large.\n";
             $uploadOk = 0;
         }
 
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
         && $imageFileType != "gif" ) {
-            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.\n";
             $uploadOk = 0;
         }
 
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
+            echo "Sorry, your file was not uploaded.\n";
         // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($file["tmp_name"], $target_file)) {
-                echo "The file ". basename($hashedFileName). " has been uploaded.";
+                echo "The file ". basename($hashedFileName). " has been uploaded.\n";
                 return $hashedFileName;
             } else {
-                echo "Sorry, there was an error uploading your file.";
+                echo "Sorry, there was an error uploading your file.\n";
             }
         }
 
