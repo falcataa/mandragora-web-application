@@ -5,10 +5,38 @@ if (isset($_POST['delete'])) {
     // Подключение к базе данных
     $dbh = new PDO('mysql:host=localhost;dbname=mandragora', 'dev', 'DarkhanBestProgrammerSuckHisDIck!!_27');
 
+    $stmt = $dbh->query('SELECT image_url FROM transplantation WHERE plant_id = $post_id');
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        if (file_exists($row['image_url'])) {
+            if (unlink($row['image_url'])) {
+                echo "Файл успешно удален.";
+            } else {
+                echo "Ошибка при удалении файла.";
+            }
+        } else {
+            echo "Файл не существует.";
+        
+        }
+    }
+
     // Выполнение запроса DELETE
     $stmt = $dbh->prepare('DELETE FROM transplantation WHERE plant_id = :id');
     $stmt->bindParam(':id', $post_id);
     $stmt->execute();
+
+    $stmt = $dbh->query('SELECT image_url FROM plant_imgs WHERE plant_id = $post_id');
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        if (file_exists($row['image_url'])) {
+            if (unlink($row['image_url'])) {
+                echo "Файл успешно удален.";
+            } else {
+                echo "Ошибка при удалении файла.";
+            }
+        } else {
+            echo "Файл не существует.";
+        
+        }
+    }
 
     // Выполнение запроса DELETE
     $stmt = $dbh->prepare('DELETE FROM plant_imgs WHERE plant_id = :id');
