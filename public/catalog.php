@@ -32,7 +32,7 @@
           echo <<<HTML
           <div class="plant-card">
             <a href="single.php?id={$id}" class="plant-card__img-wrapper">
-              <img class="plant-card__img" src="{$img}" alt="{$title}" />
+              <img class="plant-card__img" src="./uploads/{$img}" alt="{$title}" />
             </a>
             <div class="plant-card__bottom">
               <a href="single.php?id={$id}" class="plant-card__title">{$title}</a>
