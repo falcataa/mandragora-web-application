@@ -7,8 +7,9 @@ body {
 }
 
 .center-form {
-    overflow-y: auto;  /* Включить вертикальную прокрутку */
-    max-height: 100vh;  /* Максимальная высота */
+    overflow-y: auto;
+    max-height: 100vh;
+    margin-top: -50px;
 }
 
 .center-form input {
