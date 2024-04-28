@@ -42,7 +42,7 @@ for ($i = 1; $i < count($_FILES['fileToUpload']['name']); $i++) {
     ];
 
     $image = processImage($imageFile, $dbh, $imageFile['name']);
-    $dbh->exec("INSERT INTO plant_imgs (plant_id, img_url) VALUES ('$lastId', '$imageFile)");
+    $dbh->exec("INSERT INTO plant_imgs (plant_id, img_url) VALUES ('$lastId', '$image)");
 }
 
 // Process transplantation steps
