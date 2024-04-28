@@ -130,8 +130,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 $description = (strlen($row['description']) > 20) ? substr($row['description'], 0, 20) . '...' : $row['description'];
                 echo "<td>" . $description . "</td>";
                 echo "<td>" . $row['posted_at'] . "</td>";
+                echo "<td><form method='post' action='delete_post.php'><input type='hidden' name='post_id' value='" . $row['id'] . "'><button type='submit' name='delete'>Удалить</button></form></td>";
                 echo "</tr>";
-            }
+              }
             ?>
         </table>
     </div>
