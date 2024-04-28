@@ -145,7 +145,7 @@ function confirmDelete() {
                 $description = (strlen($row['description']) > 20) ? substr($row['description'], 0, 20) . '...' : $row['description'];
                 echo "<td>" . $description . "</td>";
                 echo "<td>" . $row['posted_at'] . "</td>";
-                echo "<td><form method='post' action='delete_post.php'><input type='hidden' name='post_id' value='" . $row['id'] . "'><button type='submit' name='delete' onclick='return confirmDelete()'>Удалить</button></form></td>";
+                echo "<td><form method='post' action='delete_admin.php'><input type='hidden' name='post_id' value='" . $row['id'] . "'><button type='submit' name='delete' onclick='return confirmDelete()'>Удалить</button></form></td>";
                 echo "</tr>";
               }
             ?>
