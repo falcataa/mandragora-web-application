@@ -72,7 +72,7 @@ while (isset($_FILES['TransplantationImage'.$i]) && is_uploaded_file($_FILES['Tr
 
 function processImage($file, $dbh, $fileName) {
     try{
-
+        $uploadOk = 1;
         if ($fileName === null || empty($fileName)) {
             $fileName = mt_rand() . time();
         }
