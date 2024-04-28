@@ -42,7 +42,7 @@ for ($i = 1; $i < count($_FILES['fileToUpload']['name']); $i++) {
     ];
 
     $image = processImage($imageFile, $dbh, $imageFile['name']);
-    $dbh->exec("INSERT INTO plant_imgs (plant_id, img_url) VALUES ('$lastId', '$image')");
+    $dbh->exec("INSERT INTO plant_imgs (plant_id, image_url) VALUES ('$lastId', '$image')");
 }
 
 // Process transplantation steps
@@ -59,7 +59,7 @@ for ($i = 1; $i <= count($_FILES['TransplantationImage']); $i++) {
     $TransplantationDescription = $_POST['TransplantationDescription'.$i];
 
     // Insert transplantation steps into 'transplantation_imgs' table
-    $dbh->exec("INSERT INTO transplantation_imgs (plant_id, img, description) VALUES ('$lastId', '$TransplantationImage', '$TransplantationDescription')");
+    $dbh->exec("INSERT INTO transplantation_imgs (plant_id, image_url, description) VALUES ('$lastId', '$TransplantationImage', '$TransplantationDescription')");
 }
 
 
