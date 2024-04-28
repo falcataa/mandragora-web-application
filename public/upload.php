@@ -32,7 +32,7 @@ $lastId = $dbh->lastInsertId();
 $dbh->commit();
 
 // Process remaining images and insert them into 'plant_imgs'
-for ($i = 1; $i < count($_FILES['fileToUpload']['name']); $i++) {
+for ($i = 0; $i < count($_FILES['fileToUpload']['name']); $i++) {
     $imageFile = [
         'name'      => $_FILES['fileToUpload']['name'][$i],
         'type'      => $_FILES['fileToUpload']['type'][$i],
@@ -45,24 +45,29 @@ for ($i = 1; $i < count($_FILES['fileToUpload']['name']); $i++) {
     $dbh->exec("INSERT INTO plant_imgs (plant_id, image_url) VALUES ('$lastId', '$image')");
 }
 
-// Process transplantation steps
-for ($i = 1; $i <= count($_FILES['TransplantationImage']); $i++) {
-    $TransplantationImageFile = [
-        'name'      => $_FILES['TransplantationImage'.$i]['name'],
-        'type'      => $_FILES['TransplantationImage'.$i]['type'],
-        'tmp_name'  => $_FILES['TransplantationImage'.$i]['tmp_name'],
-        'error'     => $_FILES['TransplantationImage'.$i]['error'],
-        'size'      => $_FILES['TransplantationImage'.$i]['size']
-    ];
+$i = 1;
+while (isset($_FILES['TransplantationImage'.$i])) {
+    if (is_uploaded_file($_FILES['TransplantationImage'.$i]['tmp_name'])) {
+        $TransplantationImageFile = [
+            'name'      => $_FILES['TransplantationImage'.$i]['name'],
+            'type'      => $_FILES['TransplantationImage'.$i]['type'],
+            'tmp_name'  => $_FILES['TransplantationImage'.$i]['tmp_name'],
+            'error'     => $_FILES['TransplantationImage'.$i]['error'],
+            'size'      => $_FILES['TransplantationImage'.$i]['size']
+        ];
 
-    $TransplantationImage = processImage($TransplantationImageFile, $dbh, $TransplantationImageFile['name']);
-    $TransplantationDescription = $_POST['TransplantationDescription'.$i];
+        $TransplantationImage = processImage($TransplantationImageFile, $dbh, $TransplantationImageFile['name']);
+        $TransplantationDescription = $_POST['TransplantationDescription'.$i];
 
-    // Insert transplantation steps into 'transplantation_imgs' table
-    $dbh->exec("INSERT INTO transplantation_imgs (plant_id, image_url, description) VALUES ('$lastId', '$TransplantationImage', '$TransplantationDescription')");
+        // Вставить этапы пересадки в таблицу 'transplantation_imgs'
+        $stmt = $dbh->prepare("INSERT INTO transplantation_imgs (plant_id, image_url, description) VALUES (:lastId, :transplantationImage, :transplantationDescription)");
+        $stmt->bindParam(':lastId', $lastId);
+        $stmt->bindParam(':transplantationImage', $TransplantationImage);
+        $stmt->bindParam(':transplantationDescription', $TransplantationDescription);
+        $stmt->execute();
+    }
+    $i++;
 }
-
-
 
 
 function processImage($file, $dbh, $fileName) {
