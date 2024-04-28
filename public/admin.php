@@ -7,10 +7,31 @@ if (!isset($_SESSION['admin'])) {
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
         <title>Admin Panel</title>
         <link rel="stylesheet" type="text/css" href="./css/admin-style.css">
-  </head>
+
+<script>
+let stepCount = 2;
+
+function addTransplantationStep() {
+    let transplantationStepsDiv = document.getElementById('transplantationSteps');
+
+    let newStepDiv = document.createElement('div');
+    newStepDiv.innerHTML = `
+    Пересадка шаг ${stepCount}:
+    <input type="file" name="TransplantationImage" id="TransplantationImage${stepCount}">
+
+    Описание ${stepCount} пересадки:
+    <input type="text" name="TransplantationDescription" id="TransplantationDescription${stepCount}" style="width:200px; height:50px;">
+    `;
+
+    transplantationStepsDiv.appendChild(newStepDiv);
+
+    stepCount++;
+}
+</script>
+</head>
 
   <body>
     <body>
@@ -34,18 +55,17 @@ if (!isset($_SESSION['admin'])) {
     <input type="text" name="scientificData" id="scientificData" style="width:200px; height:50px;">
 
     Пересадка шаг 1:
-    <input type="file" name="anotherFileToUpload" id="anotherFileToUpload">
+    <input type="file" name="TransplantationImage" id="TransplantationImage1">
 
     Описание 1 пересадки:
     <input type="text" name="TransplantationDescription" id="TransplantationDescription1" style="width:200px; height:50px;">
 
-    Фото пересадки 1
-    <input type="file" name="TransplantationImage" id="TransplantationImage1">
+    <div id="transplantationSteps"></div>
+
+    <button type="button" onclick="addTransplantationStep()">Add Transplantation Step</button>
 
     <input type="submit" value="Upload Form" name="submit">
-  </form>
+</form>
 </body>
-
-  </body>
 
 </html>
