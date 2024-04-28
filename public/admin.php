@@ -14,7 +14,7 @@ if (!isset($_SESSION['admin'])) {
   <title>Admin Panel</title>
 
   <link rel="stylesheet" type="text/css" href="./css/admin-style.css?<?php echo uniqid(); ?>">
-  <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+  <!-- <link rel="stylesheet" type="text/css" href="./css/normalize.css"> -->
 
 <script>
   const urlParams = new URLSearchParams(window.location.search);
@@ -85,7 +85,7 @@ function confirmDelete() {
 
 <body class="section-admin">
 <div class="left-div">
-  <h2>Загрузить растения</h2>
+  <h1>Загрузить растения</h1>
     <form action="upload.php" method="post" enctype="multipart/form-data" class="center-form">
       Добавьте фото растения (выберите сразу все фотографии):
       <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
@@ -151,7 +151,7 @@ function confirmDelete() {
             ?>
         </table>
     </div>
-
+</section>
 </body>
 
 </html>

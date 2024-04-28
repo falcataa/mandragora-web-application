@@ -4,6 +4,7 @@ body {
     align-items: flex-start;
     height: 100vh; /* vh = viewport height. Это означает, что блок будет занимать всю доступную высоту экрана */
     margin: 0;
+    font: inherit;
 }
 
 .section-admin {
