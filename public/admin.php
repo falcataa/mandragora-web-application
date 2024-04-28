@@ -62,7 +62,7 @@ function addTransplantationStep() {
 
     <div id="transplantationSteps"></div>
 
-    <button type="button" onclick="addTransplantationStep()">Add Transplantation Step</button>
+    <button type="button" onclick="addTransplantationStep()">Добавить шаг пересадки</button>
 
     <input type="submit" value="Upload Form" name="submit">
 </form>
