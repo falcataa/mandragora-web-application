@@ -60,7 +60,7 @@ while (is_uploaded_file($_FILES['TransplantationImage'.$i]['tmp_name'])) {
         $TransplantationDescription = $_POST['TransplantationDescription'.$i];
 
         // Вставить этапы пересадки в таблицу 'transplantation_imgs'
-        $stmt = $dbh->prepare("INSERT INTO transplantation_imgs (plant_id, image_url, description) VALUES (:lastId, :transplantationImage, :transplantationDescription)");
+        $stmt = $dbh->prepare("INSERT INTO transplantation (plant_id, image_url, description) VALUES (:lastId, :transplantationImage, :transplantationDescription)");
         $stmt->bindParam(':lastId', $lastId);
         $stmt->bindParam(':transplantationImage', $TransplantationImage);
         $stmt->bindParam(':transplantationDescription', $TransplantationDescription);
