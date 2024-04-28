@@ -2,10 +2,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("../src/img/login.webp");
     height: 100vh; /* vh = viewport height. Это означает, что блок будет занимать всю доступную высоту экрана */
     margin: 0;
 }
+
+.section-admin {
+    position: relative;
+    height: 100vh;
+    background-image: url("../src/img/login.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
 .center-form {
     overflow-y: auto;

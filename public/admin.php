@@ -84,6 +84,7 @@ function confirmDelete() {
 </head>
 
 <body>
+<section class="section-admin">
 <div class="left-div">
   <h2>Загрузить растения</h2>
     <form action="upload.php" method="post" enctype="multipart/form-data" class="center-form">
@@ -151,7 +152,7 @@ function confirmDelete() {
             ?>
         </table>
     </div>
-
+</section>
 </body>
 
 </html>
