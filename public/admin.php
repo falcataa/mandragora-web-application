@@ -53,22 +53,22 @@ function addTransplantationStep() {
       <input type="text" name="flowerName" id="flowerName" style="width:200px;">
 
       Описание:
-      <input type="text" name="flowerDescription" id="flowerDescription" style="width:200px; height:50px;">
+      <input type="textarea" name="flowerDescription" id="flowerDescription" style="width:200px; height:50px;">
 
       Происхождение:
-      <input type="text" name="plantOrigin" id="plantOrigin" style="width:200px; height:50px;">
+      <input type="textarea" name="plantOrigin" id="plantOrigin" style="width:200px; height:50px;">
 
       Уход за растением:
-      <input type="text" name="plantCare" id="plantCare" style="width:200px; height:50px;">
+      <input type="textarea" name="plantCare" id="plantCare" style="width:200px; height:50px;">
 
       Научные данные:
-      <input type="text" name="scientificData" id="scientificData" style="width:200px; height:50px;">
+      <input type="textare" name="scientificData" id="scientificData" style="width:200px; height:50px;">
 
       Пересадка шаг 1:
       <input type="file" name="TransplantationImage1" id="TransplantationImage1">
 
       Описание 1 пересадки:
-      <input type="text" name="TransplantationDescription1" id="TransplantationDescription1" style="width:200px; height:50px;">
+      <input type="textarea" name="TransplantationDescription1" id="TransplantationDescription1" style="width:200px; height:50px;">
 
       <div id="transplantationSteps"></div>
 
@@ -84,6 +84,7 @@ function addTransplantationStep() {
         <table border="1">
             <tr>
                 <th>ID</th>
+                <th>Фото</th>
                 <th>Название</th>
                 <th>Описание</th>
                 <th>Дата загрузки</th>
