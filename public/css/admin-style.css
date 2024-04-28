@@ -2,6 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    background-image: url("../src/img/login.webp");
     height: 100vh; /* vh = viewport height. Это означает, что блок будет занимать всю доступную высоту экрана */
     margin: 0;
 }
@@ -28,14 +29,14 @@ body {
     float: left;
     margin-left: 40px; /* Increase the left margin to move it further left */
     width: calc(50% - 40px); /* Adjust the width to make space for the right div */
-    background-color: lightblue;
+    /* background-color: lightblue;  */
 }
 
 .right-div {
     float: right;
     margin-right: 40px; /* Increase the right margin to move it further right */
     width: calc(50% - 40px); /* Adjust the width to make space for the left div */
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
 }
 
 .clearfix::after {
