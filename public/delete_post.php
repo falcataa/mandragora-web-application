@@ -9,7 +9,9 @@ if (isset($_POST['delete'])) {
     // Подключение к базе данных
     $dbh = new PDO('mysql:host=localhost;dbname=mandragora', 'dev', 'DarkhanBestProgrammerSuckHisDIck!!_27');
 
-    $stmt = $dbh->query('SELECT image_url FROM transplantation WHERE plant_id = $post_id');
+    $stmt = $dbh->prepare('SELECT image_url FROM transplantation WHERE plant_id = :id');
+    $stmt->bindParam(':id', $post_id);
+    $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         if (file_exists('uploads/' + $row['image_url'])) {
             if (unlink('uploads/' + $row['image_url'])) {
@@ -28,7 +30,9 @@ if (isset($_POST['delete'])) {
     $stmt->bindParam(':id', $post_id);
     $stmt->execute();
 
-    $stmt = $dbh->query('SELECT image_url FROM plant_imgs WHERE plant_id = $post_id');
+    $stmt = $dbh->prepare('SELECT image_url FROM plant_imgs WHERE plant_id = :id');
+    $stmt->bindParam(':id', $post_id);
+    $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         if (file_exists('uploads/' + $row['image_url'])) {
             if (unlink('uploads/' + $row['image_url'])) {
@@ -41,7 +45,6 @@ if (isset($_POST['delete'])) {
         
         }
     }
-
     // Выполнение запроса DELETE
     $stmt = $dbh->prepare('DELETE FROM plant_imgs WHERE plant_id = :id');
     $stmt->bindParam(':id', $post_id);
