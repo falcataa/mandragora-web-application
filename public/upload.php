@@ -93,7 +93,7 @@ function processImage($file, $dbh, $fileName) {
 
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-        && $imageFileType != "gif" ) {
+        && $imageFileType != "gif" && $imageFileType != "webp" ) {
 
             header("Location: admin.php?upload_status=Фото не загружено из-за ошибки: Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
             exit;
