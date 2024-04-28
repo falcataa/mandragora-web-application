@@ -34,7 +34,7 @@ function addTransplantationStep() {
     <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}">
 
     Описание ${stepCount} пересадки:
-    <input type="text" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}" style="width:200px; height:50px;">
+    <input type="textarea" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}" style="width:200px; height:50px;">
     `;
 
     transplantationStepsDiv.appendChild(newStepDiv);
