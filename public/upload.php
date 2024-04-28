@@ -31,8 +31,9 @@ $dbh->exec("INSERT INTO plants (main_image_url, title, description, plant_origin
 $lastId = $dbh->lastInsertId();
 $dbh->commit();
 
+$dbh->exec("INSERT INTO plant_imgs (plant_id, image_url) VALUES ('$lastId', '$mainImage')");
 // Process remaining images and insert them into 'plant_imgs'
-for ($i = 0; $i < count($_FILES['fileToUpload']['name']); $i++) {
+for ($i = 1; $i < count($_FILES['fileToUpload']['name']); $i++) {
     $imageFile = [
         'name'      => $_FILES['fileToUpload']['name'][$i],
         'type'      => $_FILES['fileToUpload']['type'][$i],
