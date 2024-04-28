@@ -4,6 +4,10 @@ if (!isset($_SESSION['admin'])) {
     header('Location: admin_login.php');
     exit;
 }
+
+$exampleParam = $_GET['upload_status'];
+if ($exampleParam == '' || $exampleParam == null) {}
+else {echo $exampleParam;}
 ?>
 <!DOCTYPE html>
 <html>

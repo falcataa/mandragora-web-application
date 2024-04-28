@@ -143,6 +143,6 @@ function processImage($file, $dbh, $fileName) {
     }
 }
 
-header("Location: admin.php");
+header("Location: admin.php?upload_status='Successfully uploaded image with id: $lastId");
 exit;
 ?>
