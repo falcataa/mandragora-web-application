@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
               resultItem.className = "result-item";
               resultItem.innerHTML = `
                               <a href="single.php?id=${item.id}" class="result-link">
-                                  <img src="${item.image_url}" alt="${item.title}" />
+                                  <img src="../uploads/${item.image_url}" alt="${item.title}" />
                                   <p>${item.title}</p>
                               </a>
                           `;
