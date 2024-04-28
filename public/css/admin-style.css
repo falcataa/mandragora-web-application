@@ -9,4 +9,8 @@ body {
 .center-form input {
     display: block; /* Это свойство размещает каждый input элемент под предыдущим */
     margin-bottom: 10px; /* Добавляем немного отступа снизу для каждого input, чтобы они не слипались */
+    overflow-y: auto;    /* Enable vertical scroll */
+    height: auto;    /* Adjust height as needed */
+    max-height: 100vh;
 }
+
