@@ -7,8 +7,8 @@ if (isset($_POST['delete'])) {
 
     $stmt = $dbh->query('SELECT image_url FROM transplantation WHERE plant_id = $post_id');
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        if (file_exists($row['image_url'])) {
-            if (unlink($row['image_url'])) {
+        if (file_exists('uploads/' + $row['image_url'])) {
+            if (unlink('uploads/' + $row['image_url'])) {
                 echo "Файл успешно удален.";
             } else {
                 echo "Ошибка при удалении файла.";
@@ -26,8 +26,8 @@ if (isset($_POST['delete'])) {
 
     $stmt = $dbh->query('SELECT image_url FROM plant_imgs WHERE plant_id = $post_id');
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        if (file_exists($row['image_url'])) {
-            if (unlink($row['image_url'])) {
+        if (file_exists('uploads/' + $row['image_url'])) {
+            if (unlink('uploads/' + $row['image_url'])) {
                 echo "Файл успешно удален.";
             } else {
                 echo "Ошибка при удалении файла.";
