@@ -69,7 +69,6 @@ while (isset($_FILES['TransplantationImage'.$i]) && is_uploaded_file($_FILES['Tr
     echo $i;
 }
 
-
 function processImage($file, $dbh, $fileName) {
     try{
         // Get extension of the file
@@ -138,4 +137,7 @@ function processImage($file, $dbh, $fileName) {
     echo 'Caught exception: ',  $e;
     }
 }
+
+header("Location: admin.php");
+exit;
 ?>
