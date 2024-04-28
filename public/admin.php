@@ -16,7 +16,7 @@ else {echo $exampleParam;}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Admin Panel</title>
-  <link rel="stylesheet" type="text/css" href="./css/admin-style.css">
+  <link rel="stylesheet" type="text/css" href="./css/admin-style.css?<?php echo uniqid(); ?>">
 
 <script>
 let stepCount = 2;
