@@ -94,12 +94,14 @@ function addTransplantationStep() {
             $dbh = new PDO('mysql:host=localhost;dbname=mandragora', 'dev', 'DarkhanBestProgrammerSuckHisDIck!!_27');
 
             // Выполнение запроса SELECT
-            $stmt = $dbh->query('SELECT id, title, description, posted_at FROM plants');
+            $stmt = $dbh->query('SELECT id, main_image_url, title, description, posted_at FROM plants');
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 echo "<tr>";
                 echo "<td>" . $row['id'] . "</td>";
+                echo "<td><img src='uploads/" . $row['main_image_url'] . "' class='small-image'></td>";
                 echo "<td>" . $row['title'] . "</td>";
-                echo "<td>" . $row['description'] . "</td>";
+                $description = (strlen($row['description']) > 20) ? substr($row['description'], 0, 20) . '...' : $row['description'];
+                echo "<td>" . $description . "</td>";
                 echo "<td>" . $row['posted_at'] . "</td>";
                 echo "</tr>";
             }

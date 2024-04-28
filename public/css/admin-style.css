@@ -18,3 +18,8 @@ body {
     height: auto;    /* Adjust height as needed */
 }
 
+.small-image {
+    width: 50px; /* Устанавливаем ширину изображения */
+    height: auto; /* Автоматически подстраиваем высоту */
+}
+
