@@ -20,10 +20,10 @@ function addTransplantationStep() {
     let newStepDiv = document.createElement('div');
     newStepDiv.innerHTML = `
     Пересадка шаг ${stepCount}:
-    <input type="file" name="TransplantationImage" id="TransplantationImage${stepCount}">
+    <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}">
 
     Описание ${stepCount} пересадки:
-    <input type="text" name="TransplantationDescription" id="TransplantationDescription${stepCount}" style="width:200px; height:50px;">
+    <input type="text" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}" style="width:200px; height:50px;">
     `;
 
     transplantationStepsDiv.appendChild(newStepDiv);
@@ -54,10 +54,10 @@ function addTransplantationStep() {
     <input type="text" name="scientificData" id="scientificData" style="width:200px; height:50px;">
 
     Пересадка шаг 1:
-    <input type="file" name="TransplantationImage" id="TransplantationImage1">
+    <input type="file" name="TransplantationImage1" id="TransplantationImage1">
 
     Описание 1 пересадки:
-    <input type="text" name="TransplantationDescription" id="TransplantationDescription1" style="width:200px; height:50px;">
+    <input type="text" name="TransplantationDescription1" id="TransplantationDescription1" style="width:200px; height:50px;">
 
     <div id="transplantationSteps"></div>
 
