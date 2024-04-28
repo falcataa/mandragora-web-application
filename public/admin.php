@@ -15,31 +15,34 @@ if (!isset($_SESSION['admin'])) {
   <body>
     <body>
   <form action="upload.php" method="post" enctype="multipart/form-data" class="center-form">
-    Select images to upload (you can select multiple images):
+    Добавьте фото растения (выберите сразу все фотографии):
     <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
 
-    Flower name:
+    Название:
     <input type="text" name="flowerName" id="flowerName">
 
-    Flower description:
-    <input type="text" name="flowerDescription" id="flowerDescription">
+    Описание:
+    <input type="text" name="flowerDescription" id="flowerDescription" style="width:200px; height:50px;">
 
-    Plant origin:
-    <input type="text" name="plantOrigin" id="plantOrigin">
+    Происхождение:
+    <input type="text" name="plantOrigin" id="plantOrigin" style="width:200px; height:50px;">
 
-    Plant care:
-    <input type="text" name="plantCare" id="plantCare">
+    Уход за растением:
+    <input type="text" name="plantCare" id="plantCare" style="width:200px; height:50px;">
 
-    Scientific data:
-    <input type="text" name="scientificData" id="scientificData">
+    Научные данные:
+    <input type="text" name="scientificData" id="scientificData" style="width:200px; height:50px;">
 
-    Select another image to upload:
+    Пересадка шаг 1:
     <input type="file" name="anotherFileToUpload" id="anotherFileToUpload">
 
-    Another image description:
-    <input type="text" name="anotherImageDescription" id="anotherImageDescription">
+    Описание 1 пересадки:
+    <input type="text" name="TransplantationDescription" id="TransplantationDescription1" style="width:200px; height:50px;">
 
-    <input type="submit" value="Upload Image" name="submit">
+    Фото пересадки 1
+    <input type="file" name="TransplantationImage" id="TransplantationImage1">
+
+    <input type="submit" value="Upload Form" name="submit">
   </form>
 </body>
 
