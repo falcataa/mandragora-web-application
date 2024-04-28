@@ -20,6 +20,7 @@ body {
     overflow-y: auto;
     max-height: 100vh;
     margin-top: 50px;
+    color: white;
 }
 
 .center-form input {

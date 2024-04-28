@@ -39,7 +39,7 @@ if (isset($_SESSION['error'])) {
         <link rel="stylesheet" type="text/css" href="./css/admin-style.css">
     </head>
 
-    <body>
+    <body class="section-admin">
         <form method="POST" class="center-form">
             <input type="text" name="login" placeholder="Логин">
             <input type="password" name="password" placeholder="Пароль">
