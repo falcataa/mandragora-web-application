@@ -13,8 +13,8 @@ if (isset($_POST['delete'])) {
     $stmt->bindParam(':id', $post_id);
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        if (file_exists('uploads/' + $row['image_url'])) {
-            if (unlink('uploads/' + $row['image_url'])) {
+        if (file_exists('uploads/'.$row['image_url'])) {
+            if (unlink('uploads/'.$row['image_url'])) {
                 echo "Файл успешно удален.";
             } else {
                 echo "Ошибка при удалении файла.";
@@ -24,7 +24,6 @@ if (isset($_POST['delete'])) {
         
         }
     }
-
     // Выполнение запроса DELETE
     $stmt = $dbh->prepare('DELETE FROM transplantation WHERE plant_id = :id');
     $stmt->bindParam(':id', $post_id);
@@ -34,8 +33,8 @@ if (isset($_POST['delete'])) {
     $stmt->bindParam(':id', $post_id);
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        if (file_exists('uploads/' + $row['image_url'])) {
-            if (unlink('uploads/' + $row['image_url'])) {
+        if (file_exists('uploads/'.$row['image_url'])) {
+            if (unlink('uploads/'.$row['image_url'])) {
                 echo "Файл успешно удален.";
             } else {
                 echo "Ошибка при удалении файла.";
