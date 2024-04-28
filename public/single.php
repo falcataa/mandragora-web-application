@@ -64,7 +64,7 @@ $mysqli->close();
           <div class="swiper-wrapper">
             <?php foreach ($plant_images as $image_url): ?>
               <div class="swiper-slide swiper-plants-thumbs__slide">
-                <img src="<?php echo htmlspecialchars($image_url); ?>" alt="mandragora" />
+                <img src="./uploads/<?php echo htmlspecialchars($image_url); ?>" alt="mandragora" />
               </div>
             <?php endforeach; ?>
           </div>
@@ -73,7 +73,7 @@ $mysqli->close();
           <div class="swiper-wrapper">
             <?php foreach ($plant_images as $image_url): ?>
               <div class="swiper-slide swiper-plants__slide">
-                <img src="<?php echo htmlspecialchars($image_url); ?>" alt="mandragora" />
+                <img src="./uploads/<?php echo htmlspecialchars($image_url); ?>" alt="mandragora" />
               </div>
             <?php endforeach; ?>
           </div>
@@ -144,7 +144,7 @@ $mysqli->close();
           <div class="swiper-wrapper">
             <?php foreach ($transplantations as $transplant): ?>
               <div class="swiper-slide specifications-swiper__slide">
-                <img src="<?php echo htmlspecialchars($transplant['image_url']); ?>" alt="mandragora" />
+                <img src="./uploads/<?php echo htmlspecialchars($transplant['image_url']); ?>" alt="mandragora" />
               </div>
             <?php endforeach; ?>
           </div>
