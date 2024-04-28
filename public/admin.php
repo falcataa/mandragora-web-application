@@ -38,8 +38,30 @@ function addTransplantationStep() {
     stepCount++;
 }
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form'); // Получаем форму
 
+    form.addEventListener('submit', function(event) {
+        const inputs = document.querySelectorAll('input[type="text"], textarea'); // Получаем все текстовые поля и textarea
 
+        inputs.forEach(function(input) {
+            const maxLength = input.maxLength; // Максимальная длина поля
+            const forbiddenCharacters = /[&<>"'/]/g; // Запрещенные символы
+
+            if (input.value.length > maxLength) {
+                alert(`Длина текста в поле '${input.name}' превышает допустимое значение (${maxLength}).`);
+                event.preventDefault(); // Отменяем отправку формы
+            }
+
+            if (forbiddenCharacters.test(input.value)) {
+                alert(`Поле '${input.name}' содержит запрещенные символы.`);
+                event.preventDefault(); // Отменяем отправку формы
+            }
+        });
+    });
+});
+</script>
 </head>
 
 <body>
@@ -81,7 +103,7 @@ function addTransplantationStep() {
 
     <div style="float:right; margin-right:20px;"> 
         <h2>Данные о растениях</h2>
-        <table border="1">
+        <table>
             <tr>
                 <th>ID</th>
                 <th>Фото</th>
@@ -109,9 +131,6 @@ function addTransplantationStep() {
             ?>
         </table>
     </div>
-
-
-
 
 </body>
 
