@@ -1,7 +1,7 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh; /* vh = viewport height. Это означает, что блок будет занимать всю доступную высоту экрана */
     margin: 0;
 }
