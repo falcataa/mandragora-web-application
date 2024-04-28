@@ -138,6 +138,7 @@ function processImage($file, $dbh, $fileName) {
                 exit;
             }
         }
+
         }
        catch (Exception $e) {
     // Обработка исключения
