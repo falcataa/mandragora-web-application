@@ -67,69 +67,75 @@ while (isset($_FILES['TransplantationImage'.$i])) {
         $stmt->execute();
     }
     $i++;
-    echo $i
+    echo $i;
 }
 
 
 function processImage($file, $dbh, $fileName) {
-    // Get extension of the file
-    $imageFileType = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
+    try{
+        // Get extension of the file
+        $imageFileType = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
 
-    // Hash the file name and append the extension
-    $hashedFileName = hash('sha256', $fileName . time()) . '.' . $imageFileType;
+        // Hash the file name and append the extension
+        $hashedFileName = hash('sha256', $fileName . time()) . '.' . $imageFileType;
 
-    $target_dir = "uploads/";
-    $target_file = $target_dir . $hashedFileName;
+        $target_dir = "uploads/";
+        $target_file = $target_dir . $hashedFileName;
 
-    // Check if image file is a actual image or fake image
-    if(isset($_POST["submit"])) {
-        if (is_uploaded_file($file["tmp_name"])) {
-            $check = getimagesize($file["tmp_name"]);
-            if($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
-                $uploadOk = 1;
+        // Check if image file is a actual image or fake image
+        if(isset($_POST["submit"])) {
+            if (is_uploaded_file($file["tmp_name"])) {
+                $check = getimagesize($file["tmp_name"]);
+                if($check !== false) {
+                    echo "File is an image - " . $check["mime"] . ".";
+                    $uploadOk = 1;
+                } else {
+                    echo "File is not an image.";
+                    $uploadOk = 0;
+                }
             } else {
-                echo "File is not an image.";
+                echo "No file was uploaded.";
                 $uploadOk = 0;
             }
-        } else {
-            echo "No file was uploaded.";
+        }
+        clearstatcache();
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            echo "File already exists.";
+            return $hashedFileName;
+        }
+
+        // Check file size
+        if ($file["size"] > 500000) {
+            echo "Sorry, your file is too large.";
             $uploadOk = 0;
         }
-    }
-    clearstatcache();
-    // Check if file already exists
-    if (file_exists($target_file)) {
-        echo "File already exists.";
-        return $hashedFileName;
-    }
 
-    // Check file size
-    if ($file["size"] > 500000) {
-        echo "Sorry, your file is too large.";
-        $uploadOk = 0;
-    }
-
-    // Allow certain file formats
-    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-    && $imageFileType != "gif" ) {
-        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-        $uploadOk = 0;
-    }
-
-    // Check if $uploadOk is set to 0 by an error
-    if ($uploadOk == 0) {
-        echo "Sorry, your file was not uploaded.";
-    // if everything is ok, try to upload file
-    } else {
-        if (move_uploaded_file($file["tmp_name"], $target_file)) {
-            echo "The file ". basename($hashedFileName). " has been uploaded.";
-            return $hashedFileName;
-        } else {
-            echo "Sorry, there was an error uploading your file.";
+        // Allow certain file formats
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif" ) {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
         }
-    }
 
-    return null;
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+        // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($file["tmp_name"], $target_file)) {
+                echo "The file ". basename($hashedFileName). " has been uploaded.";
+                return $hashedFileName;
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+
+        return null;
+        }
+       catch (Exception $e) {
+    // Обработка исключения
+    echo 'Caught exception: ',  $e;
+    }
 }
 ?>
