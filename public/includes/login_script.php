@@ -6,6 +6,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
 
+    // Проверяем, что поля не пустые
+    if (empty($username) || empty($password)) {
+        $_SESSION['error'] = "Все поля обязательны для заполнения.";
+        header('Location: ../login.php');
+        exit;
+    }
+
     // Подключаемся к базе данных
     $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
     if ($mysqli->connect_error) {
@@ -13,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Проверяем, существует ли пользователь с таким именем
-    $sql = "SELECT id, password FROM users WHERE username = ?";
+    $sql = "SELECT id, password FROM users WHERE login = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -26,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Пароль верный, пользователь аутентифицирован
             $_SESSION['user_id'] = $id;
             $_SESSION['username'] = $username;
-            header("Location: ../catalog.html");
+            header("Location: ../catalog.php");
             exit;
         } else {
             $_SESSION['error'] = "Неверный пароль.";

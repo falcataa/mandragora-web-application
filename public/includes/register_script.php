@@ -1,5 +1,7 @@
 <?php
 // Стартуем сессию для отображения сообщений об ошибках/успехах
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 session_start();
 
 // Проверяем, была ли отправлена форма
@@ -37,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Ошибка подключения: " . $mysqli->connect_error);
     }
     // Проверяем, существует ли уже такой пользователь
-    $sql = "SELECT id FROM users WHERE username = ?";
+    $sql = "SELECT id FROM users WHERE login = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -47,11 +49,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: ../register.php');
         exit;
     }
+
     // Если пользователь уникален, хешируем пароль и сохраняем нового пользователя
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+    $sql = "INSERT INTO users (login, password) VALUES (?, ?)";
     $stmt = $mysqli->prepare($sql);
+
     $stmt->bind_param("ss", $username, $password_hash);
     if ($stmt->execute()) {
         $_SESSION['success'] = "Регистрация прошла успешно. Теперь вы можете войти.";

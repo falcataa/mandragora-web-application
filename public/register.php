@@ -23,7 +23,11 @@
         Mandragora | Регистрация
       </div>
       <?php
+      ini_set('display_errors', 1);
+      error_reporting(E_ALL);
       session_start();
+
+
       if (isset($_SESSION['error'])) {
         echo '<div class="alert"><div class="alert__icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
