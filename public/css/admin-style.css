@@ -27,7 +27,6 @@ body {
     display: block; /* Это свойство размещает каждый input элемент под предыдущим */
     margin-bottom: 10px; /* Добавляем немного отступа снизу для каждого input, чтобы они не слипались */
     height: auto;    /* Adjust height as needed */
-    opacity: 0.6;
     border-radius: 5px;
 }
 
