@@ -6,12 +6,23 @@ if (isset($_POST['delete'])) {
     $dbh = new PDO('mysql:host=localhost;dbname=mandragora', 'dev', 'DarkhanBestProgrammerSuckHisDIck!!_27');
 
     // Выполнение запроса DELETE
+    $stmt = $dbh->prepare('DELETE FROM transplantation WHERE plant_id = :id');
+    $stmt->bindParam(':id', $post_id);
+    $stmt->execute();
+
+    // Выполнение запроса DELETE
+    $stmt = $dbh->prepare('DELETE FROM plant_imgs WHERE plant_id = :id');
+    $stmt->bindParam(':id', $post_id);
+    $stmt->execute();
+
+
+    // Выполнение запроса DELETE
     $stmt = $dbh->prepare('DELETE FROM plants WHERE id = :id');
     $stmt->bindParam(':id', $post_id);
     $stmt->execute();
 
     // Перенаправление обратно на страницу после удаления
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    header("Location: admin.php?upload_status=Successfully uploaded image with id: $lastId");
     exit;
 }
 ?>
