@@ -67,7 +67,7 @@ $(document).ready(function() {
     <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
 
     Название:
-    <input type="text" name="flowerName" id="flowerName">
+    <input type="text" name="flowerName" id="flowerName" style="width:200px;">
 
     Описание:
     <input type="textarea" name="flowerDescription" id="flowerDescription" style="width:200px; height:50px;">
