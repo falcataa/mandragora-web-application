@@ -44,7 +44,7 @@ if (isset($_SESSION['error'])) {
 </head>
 
 <body>
-    <section class="section-admin-login">
+    <section class="section-admin-login section-login">
         <form method="POST" class="center-form section-login__form">
             <input class="login-input" type="text" name="login" placeholder="Логин">
             <input class="login-input" type="password" name="password" placeholder="Пароль">
