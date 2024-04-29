@@ -1,3 +1,7 @@
+.admin-table {
+  width: 100%;
+}
+
 .admin-table__image {
   width: 50px;
   height: 50px;
@@ -90,5 +94,14 @@
 @media all and (max-width: 768px) {
   .section-admin-login__form {
     max-width: 90%;
+  }
+
+  .section-admin__box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-admin__wrapper {
+    width: 100%;
   }
 }
