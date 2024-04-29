@@ -104,16 +104,20 @@ if (!isset($_SESSION['admin'])) {
 
                         Описание:
                         <!-- <input type="textarea" name="flowerDescription" id="flowerDescription" > -->
-                        <textarea name="flowerDescription" id="flowerDescription" cols="30" rows="10"></textarea>
+                        <textarea name="flowerDescription" id="flowerDescription"></textarea>
 
                         Происхождение:
-                        <input type="textarea" name="plantOrigin" id="plantOrigin">
+                        <!-- <input type="textarea" name="plantOrigin" id="plantOrigin"> -->
+                        <textarea name="plantOrigin" id="plantOrigin"></textarea>
 
                         Уход за растением:
-                        <input type="textarea" name="plantCare" id="plantCare">
+                        <!-- <input type="textarea" name="plantCare" id="plantCare"> -->
+                        <textarea name="plantCare" id="plantCare"></textarea>
 
                         Научные данные:
-                        <input type="textare" name="scientificData" id="scientificData">
+                        <!-- <input type="textare" name="scientificData" id="scientificData"> -->
+                        <textarea name="scientificData" id="scientificData"></textarea>
+
 
                         Пересадка шаг 1:
                         <input type="file" name="TransplantationImage1" id="TransplantationImage1">
