@@ -48,6 +48,16 @@
   gap: 15px;
 }
 
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-wrapper label {
+  font-size: 14px;
+}
+
 @media all and (max-width: 768px) {
   .section-admin-login__form {
     max-width: 90%;
