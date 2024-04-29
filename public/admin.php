@@ -90,7 +90,7 @@ if (!isset($_SESSION['admin'])) {
 </head>
 
 <body>
-    <section class="section-admin section-login section-register">
+    <section class="section-register section-admin section-login ">
         <div class="left-div">
             <h1>Загрузить растения</h1>
             <form action="upload.php" method="post" enctype="multipart/form-data" class="center-form">
