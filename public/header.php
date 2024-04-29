@@ -53,7 +53,7 @@ $stmt->close();
                     <div class="header__separator"></div>
                     <a href="profile.php" class="profile">
                         <div class="profile__img-wrapper">
-                            <img src="<?php echo htmlspecialchars($user['image_url'] ?: 'src/img/avatar.webp') ?>"
+                            <img src="<?php echo htmlspecialchars('src/avatars/' . $user['image_url'] ?: 'src/img/avatar.webp') ?>"
                                 alt="user" />
                         </div>
                         <div class="profile__name">
