@@ -14,6 +14,11 @@ if (!isset($_SESSION['admin'])) {
 
     <title>Admin Panel</title>
 
+    <link rel="stylesheet" href="src/fonts/Gilroy/stylesheet.css" />
+    <link rel="stylesheet" href="src/fonts/Inter/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/admin-style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/admin-style.css?<?php echo uniqid(); ?>">
     <!-- <link rel="stylesheet" type="text/css" href="./css/normalize.css"> -->
 
