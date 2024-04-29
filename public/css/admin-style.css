@@ -58,7 +58,7 @@
   font-size: 14px;
 }
 
-.input-wrapper input,
+.input-wrapper input[type="text"],
 .input-wrapper textarea {
   border: 2px solid #e0ebca;
   outline: none;
