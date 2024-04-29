@@ -130,7 +130,7 @@ $mysqli->close();
           Научные данные о растении
         </div>
         <div class="single-specifications__tab-subtitle">
-          <?php echo htmlspecialchars($plant['scientific_data']); ?>
+          <?php echo $plant['scientific_data']; ?>
         </div>
       </div>
     </div>
