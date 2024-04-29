@@ -36,3 +36,19 @@
   clear: both;
   display: table;
 }
+
+.section-admin-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-admin-login__form {
+  max-width: 50%;
+}
+
+@media all and (max-width: 768px) {
+  .section-admin-login__form {
+    max-width: 90%;
+  }
+}
