@@ -40,14 +40,17 @@ if (!isset($_SESSION['admin'])) {
             newStepDiv.classList.add("transplantation-step")
             newStepDiv.innerHTML = `
             <div class="input-wrapper">
-            <label for="TransplantationImage${stepCount}"></label>
+                <label for="TransplantationImage${stepCount}">
                     Пересадка шаг ${stepCount}:
-                    <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}">
-                    </div>
-
+                </label>
+                <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}"/>
+            </div>
+            <div class="input-wrapper">
+                <label for="TransplantationDescription${stepCount}">
                     Описание ${stepCount} пересадки:
-                    <input type="text" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}">
-                    `;
+                </label>
+                <input type="text" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}"/>
+            </div>`;
 
             transplantationStepsDiv.appendChild(newStepDiv);
 
