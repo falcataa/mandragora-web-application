@@ -196,7 +196,7 @@ if (!isset($_SESSION['admin'])) {
                         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                             echo "<tr>";
                             echo "<td>" . $row['id'] . "</td>";
-                            echo "<td><img src='uploads/" . $row['main_image_url'] . "' class='small-image'></td>";
+                            echo "<td><img src='uploads/" . $row['main_image_url'] . "' class='admin-table__image'></td>";
                             echo "<td>" . $row['title'] . "</td>";
                             // $description = (strlen($row['description']) > 20) ? substr($row['description'], 0, 20) . '...' : $row['description'];
                             // echo "<td>" . $description . "</td>";
