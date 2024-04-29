@@ -39,8 +39,11 @@ if (!isset($_SESSION['admin'])) {
             let newStepDiv = document.createElement('div');
             newStepDiv.classList.add("transplantation-step")
             newStepDiv.innerHTML = `
+            <div class="input-wrapper">
+            <label for="TransplantationImage${stepCount}"></label>
                     Пересадка шаг ${stepCount}:
                     <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}">
+                    </div>
 
                     Описание ${stepCount} пересадки:
                     <input type="text" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}">
