@@ -42,7 +42,7 @@ if (!isset($_SESSION['admin'])) {
     <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}">
 
     Описание ${stepCount} пересадки:
-    <input type="textarea" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}" style="width:200px; height:50px;">
+    <input type="textarea" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}">
     `;
 
             transplantationStepsDiv.appendChild(newStepDiv);
