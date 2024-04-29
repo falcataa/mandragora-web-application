@@ -192,7 +192,7 @@ if (!isset($_SESSION['admin'])) {
                             echo "<td><img src='uploads/" . $row['main_image_url'] . "' class='admin-table__image'></td>";
                             echo "<td>" . $row['title'] . "</td>";
                             echo "<td>" . $row['posted_at'] . "</td>";
-                            echo "<td><form method='post' action='delete_admin.php'><input type='hidden' name='post_id' value='" . $row['id'] . "'><button class='admin-table__delete-btn' type='submit' name='delete' onclick='return confirmDelete()'>Удалить</button></form></td>";
+                            echo "<td><form method='post' action='delete_admin.php'><input type='hidden' name='post_id' value='" . $row['id'] . "'><button class='admin-table__delete-btn button' type='submit' name='delete' onclick='return confirmDelete()'>Удалить</button></form></td>";
                             echo "</tr>";
                         }
                         ?>
