@@ -73,6 +73,12 @@
   gap: 15px;
 }
 
+.admin-table th,
+.admin-table td {
+  padding: 5px;
+  font-size: 16px;
+}
+
 @media all and (max-width: 768px) {
   .section-admin-login__form {
     max-width: 90%;

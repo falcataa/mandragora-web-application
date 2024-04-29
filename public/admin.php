@@ -178,7 +178,7 @@ if (!isset($_SESSION['admin'])) {
                 </div>
                 <div class="section-admin__wrapper section-admin__right">
                     <h2 class="section-admin__heading">Данные о растениях</h2>
-                    <table>
+                    <table class="admin-table">
                         <tr>
                             <th>ID</th>
                             <th>Фото</th>
