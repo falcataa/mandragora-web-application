@@ -1439,7 +1439,7 @@
 
 .delete-post-btn {
   color: #ca383a;
-  background: transparent;
+  background: transparent !important;
   width: fit-content;
   margin-left: auto;
 }
