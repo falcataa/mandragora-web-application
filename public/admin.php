@@ -55,16 +55,16 @@ if (!isset($_SESSION['admin'])) {
             const form = document.querySelector('form'); // Получаем форму
 
             form.addEventListener('submit', function (event) {
-                const inputs = document.querySelectorAll('input[type="text"], textarea'); // Получаем все текстовые поля и textarea
+                const inputs = document.querySelectorAll('input[type="text"]'); // Получаем все текстовые поля и textarea
 
                 inputs.forEach(function (input) {
                     const maxLength = input.maxLength; // Максимальная длина поля
                     const forbiddenCharacters = /[&<>"'/]/g; // Запрещенные символы
 
-                    // if (input.value.length > maxLength) {
-                    //     alert(`Длина текста в поле '${input.name}' превышает допустимое значение (${maxLength}).`);
-                    //     event.preventDefault(); // Отменяем отправку формы
-                    // }
+                    if (input.value.length > maxLength) {
+                        alert(`Длина текста в поле '${input.name}' превышает допустимое значение (${maxLength}).`);
+                        event.preventDefault(); // Отменяем отправку формы
+                    }
 
                     if (forbiddenCharacters.test(input.value)) {
                         alert(`Поле '${input.name}' содержит запрещенные символы.`);
