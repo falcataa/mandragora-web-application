@@ -67,6 +67,12 @@
   padding: 5px 10px;
 }
 
+.transplantation-step {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 @media all and (max-width: 768px) {
   .section-admin-login__form {
     max-width: 90%;

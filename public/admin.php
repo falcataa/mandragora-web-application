@@ -152,11 +152,19 @@ if (!isset($_SESSION['admin'])) {
                             <textarea name="scientificData" id="scientificData"></textarea>
                         </div>
 
-                        Пересадка шаг 1:
-                        <input type="file" name="TransplantationImage1" id="TransplantationImage1">
+                        <div class="input-wrapper">
+                            <label for="TransplantationImage1">
+                                Пересадка шаг 1:
+                            </label>
+                            <input type="file" name="TransplantationImage1" id="TransplantationImage1">
+                        </div>
 
-                        Описание 1 пересадки:
-                        <input type="text" name="TransplantationDescription1" id="TransplantationDescription1">
+                        <div class="input-wrapper">
+                            <label for="TransplantationDescription1">
+                                Описание 1 пересадки:
+                            </label>
+                            <input type="text" name="TransplantationDescription1" id="TransplantationDescription1">
+                        </div>
 
                         <div id="transplantationSteps"></div>
 
