@@ -63,10 +63,9 @@
 
 .input-wrapper input[type="text"],
 .input-wrapper textarea {
-  border: 2px solid #e0ebca;
-  outline: none;
-  background: #e8edde;
-  border-radius: 5px;
+  border: none;
+  outline: 1px solid #e0ebca;
+  background: transparent;
   padding: 5px 10px;
 }
 
