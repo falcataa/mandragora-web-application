@@ -116,10 +116,6 @@ if (!isset($_SESSION['admin'])) {
                             </label>
                             <input type="text" name="flowerName" id="flowerName" placeholder="Введите название">
                         </div>
-
-
-
-                        <!-- <input type="textarea" name="flowerDescription" id="flowerDescription" > -->
                         <div class="input-wrapper">
                             <label for="flowerDescription">
                                 Описание:
@@ -127,9 +123,6 @@ if (!isset($_SESSION['admin'])) {
                             <textarea name="flowerDescription" id="flowerDescription"
                                 placeholder="Введите описание"></textarea>
                         </div>
-
-
-                        <!-- <input type="textarea" name="plantOrigin" id="plantOrigin"> -->
                         <div class="input-wrapper">
                             <label for="plantOrigin">
                                 Происхождение:
@@ -137,8 +130,6 @@ if (!isset($_SESSION['admin'])) {
                             <textarea name="plantOrigin" id="plantOrigin"
                                 placeholder="Введите текст происхождения"></textarea>
                         </div>
-
-                        <!-- <input type="textarea" name="plantCare" id="plantCare"> -->
                         <div class="input-wrapper">
                             <label for="plantCare">
                                 Уход за растением:
@@ -146,8 +137,6 @@ if (!isset($_SESSION['admin'])) {
                             <textarea name="plantCare" id="plantCare"
                                 placeholder="Введите текст ухода за растением"></textarea>
                         </div>
-
-                        <!-- <input type="textare" name="scientificData" id="scientificData"> -->
                         <div class="input-wrapper">
                             <label for="scientificData">
                                 Научные данные:
@@ -188,7 +177,6 @@ if (!isset($_SESSION['admin'])) {
                             <th>ID</th>
                             <th>Фото</th>
                             <th>Название</th>
-                            <!-- <th>Описание</th> -->
                             <th>Дата загрузки</th>
                         </tr>
 
@@ -203,10 +191,8 @@ if (!isset($_SESSION['admin'])) {
                             echo "<td>" . $row['id'] . "</td>";
                             echo "<td><img src='uploads/" . $row['main_image_url'] . "' class='admin-table__image'></td>";
                             echo "<td>" . $row['title'] . "</td>";
-                            // $description = (strlen($row['description']) > 20) ? substr($row['description'], 0, 20) . '...' : $row['description'];
-                            // echo "<td>" . $description . "</td>";
                             echo "<td>" . $row['posted_at'] . "</td>";
-                            echo "<td><form method='post' action='delete_admin.php'><input type='hidden' name='post_id' value='" . $row['id'] . "'><button type='submit' name='delete' onclick='return confirmDelete()'>Удалить</button></form></td>";
+                            echo "<td><form method='post' action='delete_admin.php'><input type='hidden' name='post_id' value='" . $row['id'] . "'><button class='admin-table__delete-btn' type='submit' name='delete' onclick='return confirmDelete()'>Удалить</button></form></td>";
                             echo "</tr>";
                         }
                         ?>
