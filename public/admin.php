@@ -132,7 +132,7 @@ if (!isset($_SESSION['admin'])) {
                         <input type="submit" value="Upload Form" name="submit">
                     </form>
                 </div>
-                <div class="section-admin__wrapper">
+                <div class="section-admin__wrapper section-admin__right">
                     <h2>Данные о растениях</h2>
                     <table>
                         <tr>

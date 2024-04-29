@@ -30,6 +30,11 @@
   width: 50%;
 }
 
+.section-admin__right {
+  position: sticky;
+  top: 20px;
+}
+
 .section-admin__heading {
   font-weight: 700;
   font-size: 30px;
