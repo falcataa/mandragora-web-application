@@ -37,20 +37,21 @@ if (!isset($_SESSION['admin'])) {
             let transplantationStepsDiv = document.getElementById('transplantationSteps');
 
             let newStepDiv = document.createElement('div');
+            newStepDiv.classList.add("transplantation-step")
             newStepDiv.innerHTML = `
-    Пересадка шаг ${stepCount}:
-    <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}">
+                    Пересадка шаг ${stepCount}:
+                    <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}">
 
-    Описание ${stepCount} пересадки:
-    <input type="text" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}">
-    `;
+                    Описание ${stepCount} пересадки:
+                    <input type="text" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}">
+                    `;
 
             transplantationStepsDiv.appendChild(newStepDiv);
 
             stepCount++;
         }
     </script>
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.querySelector('form'); // Получаем форму
 
@@ -73,7 +74,7 @@ if (!isset($_SESSION['admin'])) {
                 });
             });
         });
-    </script>
+    </script> -->
     <script>
         function confirmDelete() {
             var result = confirm("Вы уверены, что хотите удалить этот пост?");
