@@ -100,36 +100,35 @@ if (!isset($_SESSION['admin'])) {
                         <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
 
                         Название:
-                        <input type="textarea" name="flowerName" id="flowerName" style="width:200px;">
+                        <input type="textarea" name="flowerName" id="flowerName">
 
                         Описание:
                         <!-- <input type="textarea" name="flowerDescription" id="flowerDescription" > -->
-                        <textarea name="flowerDescription" id="flowerDescription" cols="30" rows="10"
-                            style="width:200px; height:50px; overflow: scroll;"></textarea>
+                        <textarea name="flowerDescription" id="flowerDescription" cols="30" rows="10"></textarea>
 
                         Происхождение:
-                        <input type="textarea" name="plantOrigin" id="plantOrigin" style="width:200px; height:50px;">
+                        <input type="textarea" name="plantOrigin" id="plantOrigin">
 
                         Уход за растением:
-                        <input type="textarea" name="plantCare" id="plantCare" style="width:200px; height:50px;">
+                        <input type="textarea" name="plantCare" id="plantCare">
 
                         Научные данные:
-                        <input type="textare" name="scientificData" id="scientificData"
-                            style="width:200px; height:50px;">
+                        <input type="textare" name="scientificData" id="scientificData">
 
                         Пересадка шаг 1:
                         <input type="file" name="TransplantationImage1" id="TransplantationImage1">
 
                         Описание 1 пересадки:
-                        <input type="textarea" name="TransplantationDescription1" id="TransplantationDescription1"
-                            style="width:200px; height:50px;">
+                        <input type="textarea" name="TransplantationDescription1" id="TransplantationDescription1">
 
                         <div id="transplantationSteps"></div>
 
-                        <button type="button" onclick="addTransplantationStep()" class="center-form">Добавить шаг
+                        <button class="button" type="button" onclick="addTransplantationStep()"
+                            class="center-form">Добавить шаг
                             пересадки</button>
 
-                        <input type="submit" value="Upload Form" name="submit">
+                        <input class="button" type="submit" value="Нажмите, если готовы добавить растение"
+                            name="submit">
                     </form>
                 </div>
                 <div class="section-admin__wrapper section-admin__right">
