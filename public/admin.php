@@ -96,28 +96,54 @@ if (!isset($_SESSION['admin'])) {
                 <div class="section-admin__wrapper">
                     <h1 class="section-admin__heading">Загрузить растения</h1>
                     <form action="upload.php" method="post" enctype="multipart/form-data" class="section-admin__form">
-                        Добавьте фото растения (выберите сразу все фотографии):
-                        <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
+                        <div class="input-wrapper">
+                            <label for="fileToUpload">
+                                Добавьте фото растения (выберите сразу все фотографии):
+                            </label>
+                            <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
+                        </div>
 
-                        Название:
-                        <input type="textarea" name="flowerName" id="flowerName">
+                        <div class="input-wrapper">
+                            <label for="flowerName">
+                                Название:
+                            </label>
+                            <input type="textarea" name="flowerName" id="flowerName">
+                        </div>
 
-                        Описание:
+
+
                         <!-- <input type="textarea" name="flowerDescription" id="flowerDescription" > -->
-                        <textarea name="flowerDescription" id="flowerDescription"></textarea>
+                        <div class="input-wrapper">
+                            <label for="flowerDescription">
+                                Описание:
+                            </label>
+                            <textarea name="flowerDescription" id="flowerDescription"></textarea>
+                        </div>
 
-                        Происхождение:
+
                         <!-- <input type="textarea" name="plantOrigin" id="plantOrigin"> -->
-                        <textarea name="plantOrigin" id="plantOrigin"></textarea>
+                        <div class="input-wrapper">
+                            <label for="plantOrigin">
+                                Происхождение:
+                            </label>
+                            <textarea name="plantOrigin" id="plantOrigin"></textarea>
+                        </div>
 
-                        Уход за растением:
                         <!-- <input type="textarea" name="plantCare" id="plantCare"> -->
-                        <textarea name="plantCare" id="plantCare"></textarea>
+                        <div class="input-wrapper">
+                            <label for="plantCare">
+                                Уход за растением:
+                            </label>
+                            <textarea name="plantCare" id="plantCare"></textarea>
+                        </div>
 
-                        Научные данные:
                         <!-- <input type="textare" name="scientificData" id="scientificData"> -->
-                        <textarea name="scientificData" id="scientificData"></textarea>
-
+                        <div class="input-wrapper">
+                            <label for="scientificData">
+                                Научные данные:
+                            </label>
+                            <textarea name="scientificData" id="scientificData"></textarea>
+                        </div>
 
                         Пересадка шаг 1:
                         <input type="file" name="TransplantationImage1" id="TransplantationImage1">
