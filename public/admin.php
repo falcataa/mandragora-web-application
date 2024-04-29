@@ -183,7 +183,7 @@ if (!isset($_SESSION['admin'])) {
                             <th>ID</th>
                             <th>Фото</th>
                             <th>Название</th>
-                            <th>Описание</th>
+                            <!-- <th>Описание</th> -->
                             <th>Дата загрузки</th>
                         </tr>
 
@@ -198,8 +198,8 @@ if (!isset($_SESSION['admin'])) {
                             echo "<td>" . $row['id'] . "</td>";
                             echo "<td><img src='uploads/" . $row['main_image_url'] . "' class='small-image'></td>";
                             echo "<td>" . $row['title'] . "</td>";
-                            $description = (strlen($row['description']) > 20) ? substr($row['description'], 0, 20) . '...' : $row['description'];
-                            echo "<td>" . $description . "</td>";
+                            // $description = (strlen($row['description']) > 20) ? substr($row['description'], 0, 20) . '...' : $row['description'];
+                            // echo "<td>" . $description . "</td>";
                             echo "<td>" . $row['posted_at'] . "</td>";
                             echo "<td><form method='post' action='delete_admin.php'><input type='hidden' name='post_id' value='" . $row['id'] . "'><button type='submit' name='delete' onclick='return confirmDelete()'>Удалить</button></form></td>";
                             echo "</tr>";
