@@ -38,6 +38,8 @@ if (isset($_SESSION['error'])) {
 
 <head>
     <title>Admin Login</title>
+    <link rel="stylesheet" href="src/fonts/Gilroy/stylesheet.css" />
+    <link rel="stylesheet" href="src/fonts/Inter/stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="./css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./css/admin-style.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
@@ -45,7 +47,7 @@ if (isset($_SESSION['error'])) {
 
 <body>
     <section class="section-admin-login section-login">
-        <form method="POST" class="center-form section-login__form">
+        <form method="POST" class="section-admin-login__form section-login__form">
             <input class="login-input" type="text" name="login" placeholder="Логин">
             <input class="login-input" type="password" name="password" placeholder="Пароль">
             <input class="button" type="submit" value="Войти">
