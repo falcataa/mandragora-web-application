@@ -3,30 +3,6 @@
   height: auto; /* Автоматически подстраиваем высоту */
 }
 
-.left-div {
-  float: left;
-  margin-left: 40px; /* Increase the left margin to move it further left */
-  width: calc(
-    50% - 40px
-  ); /* Adjust the width to make space for the right div */
-  color: white;
-  opacity: 0.6;
-}
-
-.right-div {
-  float: right;
-  margin-right: 40px; /* Increase the right margin to move it further right */
-  width: calc(50% - 40px); /* Adjust the width to make space for the left div */
-  color: white;
-  opacity: 0.6;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 .section-admin-login {
   display: flex;
   align-items: center;

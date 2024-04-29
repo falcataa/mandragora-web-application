@@ -90,75 +90,80 @@ if (!isset($_SESSION['admin'])) {
 </head>
 
 <body>
-    <section class="section-register section-login ">
-        <div class="left-div">
-            <h1>Загрузить растения</h1>
-            <form action="upload.php" method="post" enctype="multipart/form-data" class="center-form">
-                Добавьте фото растения (выберите сразу все фотографии):
-                <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
+    <section class="section-register section-login section-admin">
+        <div class="container">
+            <div class="section-admin__box">
+                <div class="section-admin__left">
+                    <h1 class="section-admin__heading">Загрузить растения</h1>
+                    <form action="upload.php" method="post" enctype="multipart/form-data" class="section-admin__form">
+                        Добавьте фото растения (выберите сразу все фотографии):
+                        <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
 
-                Название:
-                <input type="textarea" name="flowerName" id="flowerName" style="width:200px;">
+                        Название:
+                        <input type="textarea" name="flowerName" id="flowerName" style="width:200px;">
 
-                Описание:
-                <!-- <input type="textarea" name="flowerDescription" id="flowerDescription" > -->
-                <textarea name="flowerDescription" id="flowerDescription" cols="30" rows="10"
-                    style="width:200px; height:50px; overflow: scroll;"></textarea>
+                        Описание:
+                        <!-- <input type="textarea" name="flowerDescription" id="flowerDescription" > -->
+                        <textarea name="flowerDescription" id="flowerDescription" cols="30" rows="10"
+                            style="width:200px; height:50px; overflow: scroll;"></textarea>
 
-                Происхождение:
-                <input type="textarea" name="plantOrigin" id="plantOrigin" style="width:200px; height:50px;">
+                        Происхождение:
+                        <input type="textarea" name="plantOrigin" id="plantOrigin" style="width:200px; height:50px;">
 
-                Уход за растением:
-                <input type="textarea" name="plantCare" id="plantCare" style="width:200px; height:50px;">
+                        Уход за растением:
+                        <input type="textarea" name="plantCare" id="plantCare" style="width:200px; height:50px;">
 
-                Научные данные:
-                <input type="textare" name="scientificData" id="scientificData" style="width:200px; height:50px;">
+                        Научные данные:
+                        <input type="textare" name="scientificData" id="scientificData"
+                            style="width:200px; height:50px;">
 
-                Пересадка шаг 1:
-                <input type="file" name="TransplantationImage1" id="TransplantationImage1">
+                        Пересадка шаг 1:
+                        <input type="file" name="TransplantationImage1" id="TransplantationImage1">
 
-                Описание 1 пересадки:
-                <input type="textarea" name="TransplantationDescription1" id="TransplantationDescription1"
-                    style="width:200px; height:50px;">
+                        Описание 1 пересадки:
+                        <input type="textarea" name="TransplantationDescription1" id="TransplantationDescription1"
+                            style="width:200px; height:50px;">
 
-                <div id="transplantationSteps"></div>
+                        <div id="transplantationSteps"></div>
 
-                <button type="button" onclick="addTransplantationStep()" class="center-form">Добавить шаг
-                    пересадки</button>
+                        <button type="button" onclick="addTransplantationStep()" class="center-form">Добавить шаг
+                            пересадки</button>
 
-                <input type="submit" value="Upload Form" name="submit">
-            </form>
-        </div>
-        <div class="right-div">
-            <h2>Данные о растениях</h2>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Фото</th>
-                    <th>Название</th>
-                    <th>Описание</th>
-                    <th>Дата загрузки</th>
-                </tr>
+                        <input type="submit" value="Upload Form" name="submit">
+                    </form>
+                </div>
+                <div class="section-admin__right">
+                    <h2>Данные о растениях</h2>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Фото</th>
+                            <th>Название</th>
+                            <th>Описание</th>
+                            <th>Дата загрузки</th>
+                        </tr>
 
-                <?php
-                // Подключение к базе данных
-                $dbh = new PDO('mysql:host=localhost;dbname=mandragora', 'dev', 'DarkhanBestProgrammerSuckHisDIck!!_27');
+                        <?php
+                        // Подключение к базе данных
+                        $dbh = new PDO('mysql:host=localhost;dbname=mandragora', 'dev', 'DarkhanBestProgrammerSuckHisDIck!!_27');
 
-                // Выполнение запроса SELECT
-                $stmt = $dbh->query('SELECT id, main_image_url, title, description, posted_at FROM plants');
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<tr>";
-                    echo "<td>" . $row['id'] . "</td>";
-                    echo "<td><img src='uploads/" . $row['main_image_url'] . "' class='small-image'></td>";
-                    echo "<td>" . $row['title'] . "</td>";
-                    $description = (strlen($row['description']) > 20) ? substr($row['description'], 0, 20) . '...' : $row['description'];
-                    echo "<td>" . $description . "</td>";
-                    echo "<td>" . $row['posted_at'] . "</td>";
-                    echo "<td><form method='post' action='delete_admin.php'><input type='hidden' name='post_id' value='" . $row['id'] . "'><button type='submit' name='delete' onclick='return confirmDelete()'>Удалить</button></form></td>";
-                    echo "</tr>";
-                }
-                ?>
-            </table>
+                        // Выполнение запроса SELECT
+                        $stmt = $dbh->query('SELECT id, main_image_url, title, description, posted_at FROM plants');
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<tr>";
+                            echo "<td>" . $row['id'] . "</td>";
+                            echo "<td><img src='uploads/" . $row['main_image_url'] . "' class='small-image'></td>";
+                            echo "<td>" . $row['title'] . "</td>";
+                            $description = (strlen($row['description']) > 20) ? substr($row['description'], 0, 20) . '...' : $row['description'];
+                            echo "<td>" . $description . "</td>";
+                            echo "<td>" . $row['posted_at'] . "</td>";
+                            echo "<td><form method='post' action='delete_admin.php'><input type='hidden' name='post_id' value='" . $row['id'] . "'><button type='submit' name='delete' onclick='return confirmDelete()'>Удалить</button></form></td>";
+                            echo "</tr>";
+                        }
+                        ?>
+                    </table>
+                </div>
+            </div>
         </div>
     </section>
 </body>
