@@ -43,13 +43,13 @@ if (!isset($_SESSION['admin'])) {
                 <label for="TransplantationImage${stepCount}">
                     Пересадка шаг ${stepCount}:
                 </label>
-                <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}"/>
+                <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}" />
             </div>
             <div class="input-wrapper">
                 <label for="TransplantationDescription${stepCount}">
                     Описание ${stepCount} пересадки:
                 </label>
-                <input type="text" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}"/>
+                <input type="text" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}" placeholder="Описание ${stepCount} пересадки"/>
             </div>`;
 
             transplantationStepsDiv.appendChild(newStepDiv);
@@ -114,7 +114,7 @@ if (!isset($_SESSION['admin'])) {
                             <label for="flowerName">
                                 Название:
                             </label>
-                            <input type="text" name="flowerName" id="flowerName">
+                            <input type="text" name="flowerName" id="flowerName" placeholder="Введите название">
                         </div>
 
 
@@ -124,7 +124,8 @@ if (!isset($_SESSION['admin'])) {
                             <label for="flowerDescription">
                                 Описание:
                             </label>
-                            <textarea name="flowerDescription" id="flowerDescription"></textarea>
+                            <textarea name="flowerDescription" id="flowerDescription"
+                                placeholder="Введите описание"></textarea>
                         </div>
 
 
@@ -133,7 +134,8 @@ if (!isset($_SESSION['admin'])) {
                             <label for="plantOrigin">
                                 Происхождение:
                             </label>
-                            <textarea name="plantOrigin" id="plantOrigin"></textarea>
+                            <textarea name="plantOrigin" id="plantOrigin"
+                                placeholder="Введите текст происхождения"></textarea>
                         </div>
 
                         <!-- <input type="textarea" name="plantCare" id="plantCare"> -->
@@ -141,7 +143,8 @@ if (!isset($_SESSION['admin'])) {
                             <label for="plantCare">
                                 Уход за растением:
                             </label>
-                            <textarea name="plantCare" id="plantCare"></textarea>
+                            <textarea name="plantCare" id="plantCare"
+                                placeholder="Введите текст ухода за растением"></textarea>
                         </div>
 
                         <!-- <input type="textare" name="scientificData" id="scientificData"> -->
@@ -149,7 +152,8 @@ if (!isset($_SESSION['admin'])) {
                             <label for="scientificData">
                                 Научные данные:
                             </label>
-                            <textarea name="scientificData" id="scientificData"></textarea>
+                            <textarea name="scientificData" id="scientificData"
+                                placeholder="Введите текст научных данных"></textarea>
                         </div>
 
                         <div class="input-wrapper">
@@ -163,7 +167,8 @@ if (!isset($_SESSION['admin'])) {
                             <label for="TransplantationDescription1">
                                 Описание 1 пересадки:
                             </label>
-                            <input type="text" name="TransplantationDescription1" id="TransplantationDescription1">
+                            <input type="text" name="TransplantationDescription1" id="TransplantationDescription1"
+                                placeholder="Описание 1 пересадки">
                         </div>
 
                         <div id="transplantationSteps"></div>
