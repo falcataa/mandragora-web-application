@@ -93,7 +93,7 @@ if (!isset($_SESSION['admin'])) {
     <section class="section-register section-login section-admin">
         <div class="container">
             <div class="section-admin__box">
-                <div class="section-admin__left">
+                <div class="section-admin__wrapper">
                     <h1 class="section-admin__heading">Загрузить растения</h1>
                     <form action="upload.php" method="post" enctype="multipart/form-data" class="section-admin__form">
                         Добавьте фото растения (выберите сразу все фотографии):
@@ -132,7 +132,7 @@ if (!isset($_SESSION['admin'])) {
                         <input type="submit" value="Upload Form" name="submit">
                     </form>
                 </div>
-                <div class="section-admin__right">
+                <div class="section-admin__wrapper">
                     <h2>Данные о растениях</h2>
                     <table>
                         <tr>

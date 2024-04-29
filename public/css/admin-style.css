@@ -13,6 +13,36 @@
   max-width: 50%;
 }
 
+.section-admin {
+  padding: 100px 0;
+  height: 100%;
+  color: white;
+}
+
+.section-admin__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.section-admin__wrapper {
+  width: 50%;
+}
+
+.section-admin__heading {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.section-admin__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 @media all and (max-width: 768px) {
   .section-admin-login__form {
     max-width: 90%;
