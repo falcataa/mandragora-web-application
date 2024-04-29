@@ -177,7 +177,7 @@ if (!isset($_SESSION['admin'])) {
                     </form>
                 </div>
                 <div class="section-admin__wrapper section-admin__right">
-                    <h2>Данные о растениях</h2>
+                    <h2 class="section-admin__heading">Данные о растениях</h2>
                     <table>
                         <tr>
                             <th>ID</th>
