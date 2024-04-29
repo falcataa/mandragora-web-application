@@ -109,7 +109,7 @@ $mysqli->close();
           Происхождение растения
         </div>
         <div class="single-specifications__desc">
-          <?php echo htmlspecialchars($plant['plant_origin']); ?>
+          <?php echo $plant['plant_origin']; ?>
 
         </div>
       </div>
