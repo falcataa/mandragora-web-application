@@ -61,10 +61,10 @@ if (!isset($_SESSION['admin'])) {
                     const maxLength = input.maxLength; // Максимальная длина поля
                     const forbiddenCharacters = /[&<>"'/]/g; // Запрещенные символы
 
-                    if (input.value.length > maxLength) {
-                        alert(`Длина текста в поле '${input.name}' превышает допустимое значение (${maxLength}).`);
-                        event.preventDefault(); // Отменяем отправку формы
-                    }
+                    // if (input.value.length > maxLength) {
+                    //     alert(`Длина текста в поле '${input.name}' превышает допустимое значение (${maxLength}).`);
+                    //     event.preventDefault(); // Отменяем отправку формы
+                    // }
 
                     if (forbiddenCharacters.test(input.value)) {
                         alert(`Поле '${input.name}' содержит запрещенные символы.`);
