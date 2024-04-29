@@ -120,9 +120,8 @@ $mysqli->close();
           Уход за растением
         </div>
         <div class="single-specifications__tab-subtitle">
-          <?php echo htmlspecialchars($plant['plant_care']); ?>
+          <?php htmlspecialchars($plant['plant_care']); ?>
         </div>
-
       </div>
     </div>
     <div id="science">
