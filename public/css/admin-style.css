@@ -70,6 +70,11 @@
   color: white;
 }
 
+.input-wrapper input[type="text"]::placeholder,
+.input-wrapper textarea::placeholder {
+  color: rgba(255, 255, 255, 0.565);
+}
+
 .transplantation-step {
   display: flex;
   flex-direction: column;
