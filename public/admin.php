@@ -42,7 +42,7 @@ if (!isset($_SESSION['admin'])) {
     <input type="file" name="TransplantationImage${stepCount}" id="TransplantationImage${stepCount}">
 
     Описание ${stepCount} пересадки:
-    <input type="textarea" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}">
+    <input type="text" name="TransplantationDescription${stepCount}" id="TransplantationDescription${stepCount}">
     `;
 
             transplantationStepsDiv.appendChild(newStepDiv);
@@ -107,7 +107,7 @@ if (!isset($_SESSION['admin'])) {
                             <label for="flowerName">
                                 Название:
                             </label>
-                            <input type="textarea" name="flowerName" id="flowerName">
+                            <input type="text" name="flowerName" id="flowerName">
                         </div>
 
 
@@ -149,7 +149,7 @@ if (!isset($_SESSION['admin'])) {
                         <input type="file" name="TransplantationImage1" id="TransplantationImage1">
 
                         Описание 1 пересадки:
-                        <input type="textarea" name="TransplantationDescription1" id="TransplantationDescription1">
+                        <input type="text" name="TransplantationDescription1" id="TransplantationDescription1">
 
                         <div id="transplantationSteps"></div>
 
