@@ -38,7 +38,9 @@ if (isset($_SESSION['error'])) {
 
 <head>
     <title>Admin Login</title>
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./css/admin-style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
