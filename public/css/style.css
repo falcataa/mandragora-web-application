@@ -7,10 +7,9 @@
   background-size: cover;
 }
 .section-login__box {
-  width: 40vw;
+  width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
-  border-right: 2px solid #fff;
   padding-inline: 20px;
   display: flex;
   flex-direction: column;
@@ -21,7 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  width: 100%;
+  width: 60%;
 }
 .section-login__heading {
   color: #fff;
@@ -120,6 +119,7 @@
   }
   .section-login__form {
     gap: 40px;
+    width: 100%;
   }
   .section-login__heading {
     font-size: 30px;
