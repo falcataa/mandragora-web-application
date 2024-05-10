@@ -32,37 +32,37 @@ $stmt->close();
             src="src/avatars/<?php echo htmlspecialchars($user['image_url'] ?: 'src/img/avatar.webp'); ?>"
             alt="mandragora" />
         </div>
-        <a href="settings.php" class="button"> Редактировать профиль </a>
+        <a href="settings.php" class="button"> Профильді өңдеу </a>
       </div>
       <div class="section-profile__right">
         <div class="section-profile__info">
           <div class="section-profile__info-top">
             <div class="section-profile__name">
               <span>
-                <?php echo htmlspecialchars($user['first_name'] ?: 'Фамилия'); ?>
+                <?php echo htmlspecialchars($user['first_name'] ?: 'Тегі'); ?>
               </span>
               <span>
-                <?php echo htmlspecialchars($user['last_name'] ?: 'Имя'); ?>
+                <?php echo htmlspecialchars($user['last_name'] ?: 'Аты'); ?>
               </span>
             </div>
           </div>
           <div class="section-profile__info-bottom">
             <div class="section-profile__secondary-info">
-              <h3>Дата регистрации:</h3>
+              <h3>Тіркелген күні:</h3>
               <p><?php echo htmlspecialchars($user['created_at']); ?></p>
-              <h3>Город:</h3>
-              <p><?php echo htmlspecialchars($user['city'] ?: 'Не указан'); ?></p>
-              <h3>Номер телефона:</h3>
+              <h3>Қала:</h3>
+              <p><?php echo htmlspecialchars($user['city'] ?: 'Көрсетілмеген'); ?></p>
+              <h3>Телефон нөмірі:</h3>
               <a
-                href="tel:<?php echo htmlspecialchars($user['phone']); ?>"><?php echo htmlspecialchars($user['phone'] ?: 'Не указан'); ?></a>
-              <h3>Почта:</h3>
+                href="tel:<?php echo htmlspecialchars($user['phone']); ?>"><?php echo htmlspecialchars($user['phone'] ?: 'Көрсетілмеген'); ?></a>
+              <h3>Пошта:</h3>
               <a
-                href="mailto:<?php echo htmlspecialchars($user['email']); ?>"><?php echo htmlspecialchars($user['email'] ?: 'Не указан'); ?></a>
+                href="mailto:<?php echo htmlspecialchars($user['email']); ?>"><?php echo htmlspecialchars($user['email'] ?: 'Көрсетілмеген'); ?></a>
             </div>
           </div>
         </div>
         <div class="section-profile__posts">
-          <div class="section-profile__title">Мои посты</div>
+          <div class="section-profile__title">Менің жазбаларым</div>
           <?php
 
 
@@ -106,19 +106,19 @@ $stmt->close();
                 if (!empty($row['description'])) {
                   echo "<div class='user-post__desc'>{$row['description']}</div>";
                 }
-                echo "<button class='button delete-post-btn' data-post-id='{$row['id']}'>Удалить пост</button>";
+                echo "<button class='button delete-post-btn' data-post-id='{$row['id']}'>Жазбаны жою</button>";
                 echo "</div>"; // Закрытие user-post
               }
             } else {
               echo "<div class='section-profile__posts-no-image'><img src='src/img/posts-no.webp' alt='mandragora'></div>";
-              echo "<div class='section-profile__posts-desc'>У вас еще нет постов</div>";
+              echo "<div class='section-profile__posts-desc'>Сізде әлі жазбалар жоқ</div>";
             }
 
             $stmt->close();
             $mysqli->close();
             ?>
             <button class="button section-profile__posts-btn modal-add-post__caller">
-              Добавить пост
+              Жазба қосу
             </button>
           </div>
         </div>

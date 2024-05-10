@@ -43,7 +43,7 @@ $mysqli->close();
 <section class="section-catalog-banner">
   <div class="container">
     <div class="section-catalog-banner__heading">
-      <span> Растение </span>
+      <span> Өсімдік </span>
       <div class="section-catalog-banner__separator"></div>
       <h1><?php echo htmlspecialchars($plant['title']); ?></h1>
     </div>
@@ -85,7 +85,7 @@ $mysqli->close();
           <?php echo htmlspecialchars($plant['description']); ?>
         </div>
         <a href="#single-specifications" class="section-single__btn button">
-          Смотреть характеристики
+          Сипаттамаларды көру
         </a>
       </div>
     </div>
@@ -96,17 +96,17 @@ $mysqli->close();
   <div class="container">
     <ul class="single-specifications__tabs" data-tabs>
       <li>
-        <a class="button" data-tabby-default href="#origin">Происхождение</a>
+        <a class="button" data-tabby-default href="#origin">Шығу тегі</a>
       </li>
-      <li><a class="button" href="#care">Уход за растением</a></li>
-      <li><a class="button" href="#science">Научные данные</a></li>
-      <li><a class="button" href="#transfer">Пересадка</a></li>
+      <li><a class="button" href="#care">Өсімдікке күтім жасау</a></li>
+      <li><a class="button" href="#science">Ғылыми деректер</a></li>
+      <li><a class="button" href="#transfer">Трансплантация</a></li>
     </ul>
 
     <div id="origin">
       <div class="single-specifications__box">
         <div class="single-specifications__tab-title">
-          Происхождение растения
+          Өсімдіктің шығу тегі
         </div>
         <div class="single-specifications__desc">
           <?php echo $plant['plant_origin']; ?>
@@ -117,7 +117,7 @@ $mysqli->close();
     <div id="care">
       <div class="single-specifications__box">
         <div class="single-specifications__tab-title">
-          Уход за растением
+          Өсімдікке күтім жасау
         </div>
         <div class="single-specifications__tab-subtitle">
           <?php echo $plant['plant_care']; ?>
@@ -127,7 +127,7 @@ $mysqli->close();
     <div id="science">
       <div class="single-specifications__box">
         <div class="single-specifications__tab-title">
-          Научные данные о растении
+          Өсімдік туралы ғылыми деректер
         </div>
         <div class="single-specifications__tab-subtitle">
           <?php echo $plant['scientific_data']; ?>
@@ -137,7 +137,7 @@ $mysqli->close();
     <div id="transfer">
       <div class="single-specifications__box">
         <div class="single-specifications__tab-title">
-          Подготовка к пересадке
+          Трансплантацияға дайындық
         </div>
         <div class="specifications-swiper">
           <div class="swiper-wrapper">

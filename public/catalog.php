@@ -4,7 +4,7 @@
     <div class="section-catalog-banner__heading">
       <span>Mandragora</span>
       <div class="section-catalog-banner__separator"></div>
-      <h1>Каталог растений</h1>
+      <h1>Өсімдіктер каталогы</h1>
     </div>
   </div>
 </section>
@@ -38,12 +38,12 @@
               <a href="single.php?id={$id}" class="plant-card__title">{$title}</a>
               <div class="plant-card__desc">{$desc}</div>
             </div>
-            <a href="single.php?id={$id}" class="button plant-card__btn">Посмотреть</a>
+            <a href="single.php?id={$id}" class="button plant-card__btn">Көру</a>
           </div>
 HTML;
         }
       } else {
-        echo "Нет доступных растений.";
+        echo "Өсімдіктер жоқ.";
       }
 
       $mysqli->close();

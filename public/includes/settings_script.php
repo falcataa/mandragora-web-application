@@ -43,13 +43,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param($types, ...$params);
         if ($stmt->execute()) {
-            $_SESSION['success'] = "Изменения сохранены успешно!";
+            $_SESSION['success'] = "Өзгерістер сәтті сақталды!";
         } else {
-            $_SESSION['error'] = "Ошибка обновления данных: " . $stmt->error;
+            $_SESSION['error'] = "Деректерді жаңарту қатесі: " . $stmt->error;
         }
         $stmt->close();
     } else {
-        $_SESSION['error'] = "Нет данных для обновления.";
+        $_SESSION['error'] = "Жаңарту үшін деректер жоқ.";
     }
 
     $mysqli->close();

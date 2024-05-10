@@ -8,14 +8,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Проверка на совпадение паролей
     if ($new_password !== $new_password_repeat) {
-        $_SESSION['error'] = "Пароли не совпадают.";
+        $_SESSION['error'] = "Құпия сөздер бірдей емес.";
         header('Location: ../settings.php');
         exit;
     }
 
     // Валидация нового пароля
     if (strlen($new_password) < 6 || !preg_match("/[a-zA-Z]/", $new_password) || !preg_match("/\d/", $new_password)) {
-        $_SESSION['error'] = "Пароль должен быть не менее 6 символов и содержать хотя бы одну цифру и одну букву.";
+        $_SESSION['error'] = "Құпия сөз кем дегенде 6 таңбадан тұруы керек және кем дегенде бір сан мен бір әріптен тұруы керек.";
         header('Location: ../settings.php');
         exit;
     }
@@ -30,9 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $mysqli->prepare("UPDATE users SET password = ? WHERE id = ?");
     $stmt->bind_param("si", $new_password_hash, $user_id);
     if ($stmt->execute()) {
-        $_SESSION['success'] = "Пароль успешно обновлен.";
+        $_SESSION['success'] = "Құпия сөз сәтті жаңартылды.";
     } else {
-        $_SESSION['error'] = "Ошибка при обновлении пароля: " . $stmt->error;
+        $_SESSION['error'] = "Құпия сөзді жаңарту қатесі: " . $stmt->error;
     }
 
     $stmt->close();

@@ -15,21 +15,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Проверяем, что поля не пустые
     if (empty($username) || empty($password) || empty($confirm_password)) {
-        $_SESSION['error'] = "Все поля обязательны для заполнения.";
+        $_SESSION['error'] = "Барлық өрістерді толтыру қажет.";
         header('Location: ../register.php');
         exit;
     }
 
     // Проверяем минимальную длину логина и пароля
     if (strlen($username) < 5 || strlen($password) < 6) {
-        $_SESSION['error'] = "Логин должен быть не менее 5 символов, пароль не менее 6 символов.";
+        $_SESSION['error'] = "Логин кемінде 5 таңба, пароль кемінде 6 таңба болуы керек.";
         header('Location: ../register.php');
         exit;
     }
 
     // Проверяем, совпадают ли пароли
     if ($password !== $confirm_password) {
-        $_SESSION['error'] = "Пароли не совпадают.";
+        $_SESSION['error'] = "Құпия сөздер бірдей емес.";
         header('Location: ../register.php');
         exit;
     }
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-        $_SESSION['error'] = "Пользователь с таким логином уже существует.";
+        $_SESSION['error'] = "Мұндай логинмен пайдаланушы бар.";
         header('Location: ../register.php');
         exit;
     }
@@ -58,11 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt->bind_param("ss", $username, $password_hash);
     if ($stmt->execute()) {
-        $_SESSION['success'] = "Регистрация прошла успешно. Теперь вы можете войти.";
+        $_SESSION['success'] = "Тіркеу сәтті өтті. Енді кіріңіз.";
         header('Location: ../login.php');
         exit;
     } else {
-        $_SESSION['error'] = "Ошибка при регистрации: " . $stmt->error;
+        $_SESSION['error'] = "Тіркеу кезінде қате: " . $stmt->error;
         header('Location: ../register.php');
         exit;
     }

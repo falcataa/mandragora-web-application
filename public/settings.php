@@ -3,7 +3,7 @@
 <section class="section-settings">
   <div class="container">
     <div class="section-settings__box">
-      <div class="section-settings__title">Персональная информация</div>
+      <div class="section-settings__title">Жеке ақпарат</div>
       <?php
       session_start();
       if (isset($_SESSION['error'])) {
@@ -24,11 +24,11 @@
       <form action="includes/settings_script.php" method="POST" class="section-settings__grid"
         enctype="multipart/form-data">
         <div class="section-settings__input-wrapper">
-          <label for="profile__name">Имя</label>
+          <label for="profile__name">Аты</label>
           <input name="first_name" type="text" class="section-settings__input" id="profile__name" />
         </div>
         <div class="section-settings__input-wrapper">
-          <label for="profile__surname">Фамилия</label>
+          <label for="profile__surname">Тегі</label>
           <input name="last_name" type="text" class="section-settings__input" id="profile__surname" />
         </div>
         <div class="section-settings__input-wrapper section-settings__input-wrapper_order">
@@ -38,39 +38,39 @@
           <input name="image_url" type="file" class="section-settings__input" id="profile__avatar" />
         </div>
         <div class="section-settings__input-wrapper">
-          <label for="profile__city">Город</label>
+          <label for="profile__city">Қала</label>
           <input name="city" type="text" class="section-settings__input" id="profile__city" />
         </div>
         <div class="section-settings__input-wrapper">
-          <label for="profile__number">Номер телефона</label>
+          <label for="profile__number">Телефон нөмірі</label>
           <input name="phone" type="tel" class="section-settings__input" id="profile__number" />
         </div>
         <div class="section-settings__input-wrapper">
-          <label for="profile__mail">Почта</label>
+          <label for="profile__mail">Пошта</label>
           <input name="email" type="email" class="section-settings__input" id="profile__mail" />
         </div>
         <div class="section-settings__btns">
-          <button type="submit" class="button">Сохранить</button>
+          <button type="submit" class="button">Сақтау</button>
         </div>
       </form>
     </div>
     <div class="section-settings__box">
-      <div class="section-settings__title">Доступы аккаунта</div>
+      <div class="section-settings__title">Тіркелгі рұқсаттары</div>
       <form action="includes/change_password.php" method="POST"
         class="section-settings__grid section-settings__grid_two-columns">
         <div class="section-settings__input-wrapper">
-          <label for="profile__password">Новый пароль</label>
+          <label for="profile__password">Жаңа құпия сөз</label>
           <input name="new_password" type="password" class="section-settings__input" id="profile__password"
             pattern="(?=.*\d)(?=.*[a-zA-Z]).{6,}"
-            title="Пароль должен содержать от 6 до 30 символов и состоять как из букв, так и из цифр" />
+            title="Құпия сөз 6-дан 30-ға дейін таңбадан тұруы керек және әріптерден де, сандардан да тұруы керек" />
         </div>
         <div class="section-settings__input-wrapper">
-          <label for="profile__password-repeat">Повторите новый пароль</label>
+          <label for="profile__password-repeat">Жаңа құпия сөзді қайталаңыз</label>
           <input name="new_password_repeat" type="password" class="section-settings__input"
             id="profile__password-repeat" />
         </div>
         <div class="section-settings__btns section-settings__btns_span-2">
-          <button type="submit" class="button">Сохранить</button>
+          <button type="submit" class="button">Сақтау</button>
         </div>
       </form>
     </div>

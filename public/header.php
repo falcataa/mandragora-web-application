@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Mandragora | растения" />
-    <meta property="og:description" content="Дипломный проект | сделанный Акылбеком и Рабигой" />
-    <meta name="description" content="Дипломный проект | сделанный Акылбеком и Рабигой" />
+    <meta property="og:title" content="Mandragora | өсімдіктер" />
+    <meta property="og:description" content="Дипломдық жоба / Ақылбек пен Рабига жасаған" />
+    <meta name="description" content="Дипломдық жоба / Ақылбек пен Рабига жасаған" />
     <title>Mandragora</title>
 
     <link rel="stylesheet" type="text/css"
@@ -48,7 +48,7 @@ $stmt->close();
 
                 <div class="header__right">
                     <form class="search-form">
-                        <input type="search" class="search-form__input" placeholder="Найти растение" />
+                        <input type="search" class="search-form__input" placeholder="Өсімдікті табу" />
                     </form>
                     <div class="header__separator"></div>
                     <a href="profile.php" class="profile">

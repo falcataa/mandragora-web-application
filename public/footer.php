@@ -4,9 +4,9 @@
     <div class="container">
         <div class="footer__box">
             <div class="footer__first">
-                Дипломный проект <span>Mandragora</span>
+                Дипломдық жоба <span>Mandragora</span>
             </div>
-            <div class="footer__second">Авторы: Акылбек и Рабига</div>
+            <div class="footer__second">Авторлары: Ақылбек пен Рабига</div>
         </div>
     </div>
 </footer>
@@ -22,18 +22,18 @@
             <form action="add_post.php" method="POST" enctype="multipart/form-data" class="modal-add-post__form">
                 <div class="modal-add-post__input-wrapper">
                     <label for="modal-add-post__label_title" class="modal-add-post__label">
-                        Название поста
+                        Жазбаның атауы
                     </label>
                     <input name="title" id="modal-add-post__label_title" type="text" class="modal-add-post__input"
-                        placeholder="Введите название поста" />
+                        placeholder="Жазбаның атын енгізіңіз" />
                 </div>
                 <div class="modal-add-post__input-wrapper">
                     <label for="modal-add-post__desc" class="modal-add-post__label">
-                        Описание поста
+                        Жазбаның сипаттамасы
                     </label>
                     <textarea name="description" id="modal-add-post__desc"
                         class="modal-add-post__input modal-add-post__textarea"
-                        placeholder="Введите описание поста"></textarea>
+                        placeholder="Жазбаның сипаттамасын енгізіңіз"></textarea>
                 </div>
                 <div class="modal-add-post__input-wrapper">
                     <label class="modal-add-post__label_img" for="post-img">
@@ -42,7 +42,7 @@
                     <input name="post_img" type="file" id="post-img" />
                 </div>
 
-                <button class="button" type="submit">Опубликовать пост</button>
+                <button class="button" type="submit">Жазбаны қосу</button>
             </form>
         </div>
     </div>

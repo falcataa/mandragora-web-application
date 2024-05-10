@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.location.pathname.includes("settings")) {
     const inputFile = document.querySelector("#profile__avatar");
     const pictureImage = document.querySelector(".profile__avatar-desc");
-    const pictureImageTxt = "Выберите <br/> изображение";
+    const pictureImageTxt = "Cуретті <br/> таңдаңыз";
     pictureImage.innerHTML = pictureImageTxt;
 
     inputFile.addEventListener("change", function (e) {
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.location.pathname.includes("profile")) {
     const inputFile = document.querySelector("#post-img");
     const pictureImage = document.querySelector(".modal-add-post__span");
-    const pictureImageTxt = "Выберите <br/> изображение";
+    const pictureImageTxt = "Cуретті <br/> таңдаңыз";
     pictureImage.innerHTML = pictureImageTxt;
 
     inputFile.addEventListener("change", function (e) {
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".delete-post-btn").forEach((button) => {
     button.addEventListener("click", function () {
       const postId = this.getAttribute("data-post-id");
-      if (confirm("Вы уверены, что хотите удалить этот пост?")) {
+      if (confirm("Сіз бұл жазбаны жойғыңыз келетініне сенімдісіз бе?")) {
         fetch("../delete_post.php", {
           method: "POST",
           headers: {
@@ -227,8 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
               resultsDiv.appendChild(resultItem);
             });
           } else {
-            resultsDiv.innerHTML =
-              '<div class="no-results">Нет результатов</div>';
+            resultsDiv.innerHTML = '<div class="no-results">Нәтиже жоқ</div>';
           }
         });
     } else {

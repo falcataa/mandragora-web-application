@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Проверяем, что поля не пустые
     if (empty($username) || empty($password)) {
-        $_SESSION['error'] = "Все поля обязательны для заполнения.";
+        $_SESSION['error'] = "Барлық өрістерді толтыру қажет.";
         header('Location: ../login.php');
         exit;
     }
@@ -36,12 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../catalog.php");
             exit;
         } else {
-            $_SESSION['error'] = "Неверный пароль.";
+            $_SESSION['error'] = "Құпия сөз дұрыс емес.";
             header("Location: ../login.php");
             exit;
         }
     } else {
-        $_SESSION['error'] = "Пользователь с таким логином не найден.";
+        $_SESSION['error'] = "Мұндай логині бар пайдаланушы табылмады.";
         header("Location: ../login.php");
         exit;
     }

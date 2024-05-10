@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Mandragora | растения" />
-  <meta property="og:description" content="Дипломный проект | сделанный Акылбеком и Рабигой" />
-  <meta name="description" content="Дипломный проект | сделанный Акылбеком и Рабигой" />
-  <title>Страница входа | Mandragora</title>
+  <meta property="og:title" content="Mandragora | өсімдіктер" />
+  <meta property="og:description" content="Дипломдық жоба / Ақылбек пен Рабига жасаған" />
+  <meta name="description" content="Дипломдық жоба / Ақылбек пен Рабига жасаған" />
+  <title>Кіру беті | Mandragora</title>
 
   <link rel="stylesheet" href="src/fonts/Gilroy/stylesheet.css" />
   <link rel="stylesheet" href="src/fonts/Inter/stylesheet.css" />
@@ -49,7 +49,7 @@
           </svg>
         </div>
         <div class="login-input__wrapper">
-          <input type="password" class="login-input" placeholder="Пароль" name="password" />
+          <input type="password" class="login-input" placeholder="Құпия сөз" name="password" />
           <div class="login-input__eye">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none" class="show">
               <path
@@ -64,10 +64,10 @@
             </svg>
           </div>
         </div>
-        <button type="submit" class="section-login__btn">Войти</button>
+        <button type="submit" class="section-login__btn">Кіру</button>
       </form>
       <div class="section-login__register">
-        <a href="register.php">У меня нет аккаунта</a>
+        <a href="register.php">Менің аккаунтым жоқ</a>
       </div>
     </div>
   </section>
