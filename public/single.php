@@ -119,9 +119,7 @@ $mysqli->close();
         <div class="single-specifications__tab-title">
           Өсімдікке күтім жасау
         </div>
-        <div class="single-specifications__tab-subtitle">
-          <?php echo $plant['plant_care']; ?>
-        </div>
+        <?php echo $plant['plant_care']; ?>
       </div>
     </div>
     <div id="science">
@@ -129,9 +127,9 @@ $mysqli->close();
         <div class="single-specifications__tab-title">
           Өсімдік туралы ғылыми деректер
         </div>
-        <div class="single-specifications__tab-subtitle">
-          <?php echo $plant['scientific_data']; ?>
-        </div>
+
+        <?php echo $plant['scientific_data']; ?>
+
       </div>
     </div>
     <div id="transfer">
