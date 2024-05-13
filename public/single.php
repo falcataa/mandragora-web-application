@@ -127,9 +127,7 @@ $mysqli->close();
         <div class="single-specifications__tab-title">
           Өсімдік туралы ғылыми деректер
         </div>
-
         <?php echo $plant['scientific_data']; ?>
-
       </div>
     </div>
     <div id="transfer">

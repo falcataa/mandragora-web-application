@@ -627,6 +627,10 @@
   font-size: 26px;
   font-weight: 400;
   line-height: 140%;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 9;
+  overflow: hidden;
+  display: -webkit-box;
 }
 .section-single__btn {
   margin-top: auto;
