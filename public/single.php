@@ -110,7 +110,6 @@ $mysqli->close();
         </div>
         <div class="single-specifications__desc">
           <?php echo $plant['plant_origin']; ?>
-
         </div>
       </div>
     </div>
@@ -127,7 +126,9 @@ $mysqli->close();
         <div class="single-specifications__tab-title">
           Өсімдік туралы ғылыми деректер
         </div>
-        <?php echo $plant['scientific_data']; ?>
+        <div class="single-specifications__desc single-specifications__desc_one-column">
+          <?php echo $plant['scientific_data']; ?>
+        </div>
       </div>
     </div>
     <div id="transfer">
