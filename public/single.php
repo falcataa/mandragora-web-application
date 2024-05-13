@@ -139,11 +139,24 @@ $mysqli->close();
         </div>
         <div class="specifications-swiper">
           <div class="swiper-wrapper">
-            <?php foreach ($transplantations as $transplant): ?>
-              <div class="swiper-slide specifications-swiper__slide">
-                <img src="./uploads/<?php echo htmlspecialchars($transplant['image_url']); ?>" alt="mandragora" />
-              </div>
-            <?php endforeach; ?>
+            <div class="swiper-slide specifications-swiper__slide">
+              <img src="/src/img/transfer-1.webp" alt="mandragora" />
+            </div>
+            <div class="swiper-slide specifications-swiper__slide">
+              <img src="/src/img/transfer-2.webp" alt="mandragora" />
+            </div>
+            <div class="swiper-slide specifications-swiper__slide">
+              <img src="/src/img/transfer-3.webp" alt="mandragora" />
+            </div>
+            <div class="swiper-slide specifications-swiper__slide">
+              <img src="/src/img/transfer-4.webp" alt="mandragora" />
+            </div>
+            <div class="swiper-slide specifications-swiper__slide">
+              <img src="/src/img/transfer-5.webp" alt="mandragora" />
+            </div>
+            <div class="swiper-slide specifications-swiper__slide">
+              <img src="/src/img/transfer-6.webp" alt="mandragora" />
+            </div>
           </div>
         </div>
         <div class="single-specifications__desc single-specifications__desc_one-column">
