@@ -60,6 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         $_SESSION['success'] = "Тіркеу сәтті өтті. Енді кіріңіз.";
         header('Location: ../login.php');
+        // ! перенаправить на каталог
         exit;
     } else {
         $_SESSION['error'] = "Тіркеу кезінде қате: " . $stmt->error;

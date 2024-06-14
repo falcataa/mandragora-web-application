@@ -6,7 +6,7 @@
             <div class="footer__first">
                 Дипломдық жоба <span>Mandragora</span>
             </div>
-            <div class="footer__second">Авторлары: Ақылбек пен Рабига</div>
+            <div class="footer__second">Авторлары: Ақылбек пен Рабиға</div>
         </div>
     </div>
 </footer>
